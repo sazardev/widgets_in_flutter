@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:widgets_in_flutter/components/components.screen.dart';
 import 'package:widgets_in_flutter/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/theme/theme-color.widget.dart';
 import 'package:widgets_in_flutter/theme/theme-material.widget.dart';
@@ -31,8 +32,8 @@ class NavigationScreen extends StatelessWidget {
             child: ListView(
               children: <Widget>[
                 ListTile(
-                  leading: const Icon(Icons.home),
-                  title: const Text('Home'),
+                  leading: const Icon(Icons.widgets),
+                  title: const Text('Components'),
                   onTap: () {
                     _navController.changePage(0);
                   },
@@ -64,7 +65,19 @@ class NavigationScreen extends StatelessWidget {
   Widget _buildNarrowLayout(context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Narrow Layout'),
+        leading: Obx(() {
+          if (_navController.currentScreenIndex.value != -1) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                _navController.goBack();
+              },
+            );
+          } else {
+            return const SizedBox.shrink();
+          }
+        }),
+        title: Obx(() => Text(_navController.currentScreenTitle)),
         actions: [
           ThemeMaterial(themeController: _themeController, isLandscape: false),
           ThemeBrightness(
@@ -72,12 +85,12 @@ class NavigationScreen extends StatelessWidget {
           ThemeSelector(themeController: _themeController, isLandscape: false),
         ],
       ),
-      body: _getPage(_navController.currentPage.value),
+      body: Obx(() => _navController.currentScreen),
       bottomNavigationBar: NavigationBar(
         destinations: const <NavigationDestination>[
           NavigationDestination(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.widgets),
+            label: 'Components',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings),
@@ -96,7 +109,7 @@ class NavigationScreen extends StatelessWidget {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return const Center(child: Text('Home Page'));
+        return const ComponentsScreen();
       case 1:
         return const Center(child: Text('Settings Page'));
       default:
