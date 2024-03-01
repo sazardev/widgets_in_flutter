@@ -44,7 +44,12 @@ class NavigationScreen extends StatelessWidget {
                     _navController.changePage(1);
                   },
                 ),
-                // Agrega más ListTile aquí para más páginas
+                ThemeBrightness(
+                    themeController: _themeController, isLandscape: true),
+                ThemeMaterial(
+                    themeController: _themeController, isLandscape: true),
+                ThemeSelector(
+                    themeController: _themeController, isLandscape: true),
               ],
             ),
           ),
@@ -61,9 +66,10 @@ class NavigationScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Narrow Layout'),
         actions: [
-          ThemeMaterial(themeController: _themeController),
-          ThemeBrightness(themeController: _themeController),
-          ThemeSelector(themeController: _themeController),
+          ThemeMaterial(themeController: _themeController, isLandscape: false),
+          ThemeBrightness(
+              themeController: _themeController, isLandscape: false),
+          ThemeSelector(themeController: _themeController, isLandscape: false),
         ],
       ),
       body: _getPage(_navController.currentPage.value),
