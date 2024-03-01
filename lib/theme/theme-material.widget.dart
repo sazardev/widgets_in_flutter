@@ -5,22 +5,32 @@ import 'package:widgets_in_flutter/theme/theme.controller.dart';
 class ThemeMaterial extends StatelessWidget {
   const ThemeMaterial({
     super.key,
-    required ThemeController themeController,
-  }) : _themeController = themeController;
+    required this.themeController,
+    required this.isLandscape,
+  });
 
-  final ThemeController _themeController;
+  final ThemeController themeController;
+  final bool isLandscape;
 
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return IconButton(
-        onPressed: () {
-          _themeController.changeMaterialVersion();
-        },
-        icon: Icon(_themeController.isMaterial3.value
-            ? Icons.threed_rotation
-            : Icons.two_k),
-      );
+      return isLandscape
+          ? SwitchListTile(
+              title: const Text('Material 3'),
+              value: themeController.isMaterial3.value,
+              onChanged: (bool value) {
+                themeController.changeMaterialVersion();
+              },
+            )
+          : IconButton(
+              onPressed: () {
+                themeController.changeMaterialVersion();
+              },
+              icon: Icon(themeController.isMaterial3.value
+                  ? Icons.threed_rotation
+                  : Icons.two_k),
+            );
     });
   }
 }
