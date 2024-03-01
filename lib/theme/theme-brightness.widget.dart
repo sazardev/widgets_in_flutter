@@ -5,22 +5,32 @@ import 'package:widgets_in_flutter/theme/theme.controller.dart';
 class ThemeBrightness extends StatelessWidget {
   const ThemeBrightness({
     super.key,
-    required ThemeController themeController,
-  }) : _themeController = themeController;
+    required this.themeController,
+    required this.isLandscape,
+  });
 
-  final ThemeController _themeController;
+  final ThemeController themeController;
+  final bool isLandscape;
 
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return IconButton(
-        onPressed: () {
-          _themeController.changeTheme();
-        },
-        icon: Icon(_themeController.isDarkTheme.value
-            ? Icons.light_mode
-            : Icons.dark_mode),
-      );
+      return isLandscape
+          ? SwitchListTile(
+              title: const Text('Dark Theme'),
+              value: themeController.isDarkTheme.value,
+              onChanged: (bool value) {
+                themeController.changeTheme();
+              },
+            )
+          : IconButton(
+              onPressed: () {
+                themeController.changeTheme();
+              },
+              icon: Icon(themeController.isDarkTheme.value
+                  ? Icons.light_mode
+                  : Icons.dark_mode),
+            );
     });
   }
 }
