@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:widgets_in_flutter/components/components.screen.dart';
-import 'package:widgets_in_flutter/navigation/navigation.controller.dart';
+import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
 import 'package:widgets_in_flutter/settings/settings.screen.dart';
 
 class NavigationBarWidget extends StatelessWidget {
@@ -9,7 +9,7 @@ class NavigationBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<NavigationController>(
+    return GetBuilder<RoutesController>(
       builder: (controller) {
         return NavigationBar(
           destinations: const <NavigationDestination>[

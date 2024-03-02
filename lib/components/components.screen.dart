@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:widgets_in_flutter/components/actions/actions.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
-import 'package:widgets_in_flutter/theme/theme-brightness.widget.dart';
-import 'package:widgets_in_flutter/theme/theme-color.widget.dart';
-import 'package:widgets_in_flutter/theme/theme-material.widget.dart';
+import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
+import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
+import 'package:widgets_in_flutter/core/theme/theme-material.widget.dart';
 
 class ComponentsScreen extends StatelessWidget {
   const ComponentsScreen({super.key});

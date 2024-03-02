@@ -1,7 +1,7 @@
 // theme-selector.widget.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/theme/theme.controller.dart';
+import 'package:widgets_in_flutter/core/theme/theme.controller.dart';
 
 final Map<Color, String> colorList = {
   Colors.blue: 'Blue',
