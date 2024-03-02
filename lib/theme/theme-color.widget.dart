@@ -1,5 +1,6 @@
 // theme-selector.widget.dart
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:widgets_in_flutter/theme/theme.controller.dart';
 
 final Map<Color, String> colorList = {
@@ -16,13 +17,12 @@ final Map<Color, String> colorList = {
 };
 
 class ThemeSelector extends StatelessWidget {
-  const ThemeSelector({
+  ThemeSelector({
     super.key,
-    required this.themeController,
     required this.isLandscape,
   });
 
-  final ThemeController themeController;
+  final ThemeController themeController = Get.put(ThemeController());
   final bool isLandscape;
 
   @override

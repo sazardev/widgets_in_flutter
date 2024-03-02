@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:widgets_in_flutter/components/actions/actions.screen.dart';
+import 'package:widgets_in_flutter/components/components.screen.dart';
+import 'package:widgets_in_flutter/navigation/navigation.controller.dart';
+import 'package:widgets_in_flutter/routes/app.routes.dart';
+import 'package:widgets_in_flutter/settings/settings.screen.dart';
 import 'package:widgets_in_flutter/theme/theme.controller.dart';
-import 'navigation/navigation.screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +22,26 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: _themeController.themeData,
-        home: NavigationScreen(),
+        initialRoute: AppRoutes.INITIAL,
+        getPages: [
+          GetPage(
+            name: AppRoutes.INITIAL,
+            page: () => const ComponentsScreen(),
+          ),
+          GetPage(
+            name: AppRoutes.SETTINGS,
+            page: () => const SettingsScreen(),
+          ),
+          GetPage(
+            name: AppRoutes.COMPONENTS_ACTIONS,
+            page: () => const ActionsScreen(),
+          ),
+        ],
+        initialBinding: BindingsBuilder(() {
+          Get.put(
+            NavigationController(),
+          );
+        }),
       );
     });
   }

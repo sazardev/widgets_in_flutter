@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/navigation/navigation.controller.dart';
+import 'package:widgets_in_flutter/components/actions/actions.screen.dart';
+import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
+import 'package:widgets_in_flutter/theme/theme-brightness.widget.dart';
+import 'package:widgets_in_flutter/theme/theme-color.widget.dart';
+import 'package:widgets_in_flutter/theme/theme-material.widget.dart';
 
 class ComponentsScreen extends StatelessWidget {
   const ComponentsScreen({super.key});
@@ -8,6 +12,14 @@ class ComponentsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Components'),
+        actions: [
+          ThemeMaterial(isLandscape: false),
+          ThemeBrightness(isLandscape: false),
+          ThemeSelector(isLandscape: false),
+        ],
+      ),
       body: ListView(
         padding: const EdgeInsets.symmetric(
           horizontal: 8,
@@ -19,10 +31,8 @@ class ComponentsScreen extends StatelessWidget {
               leading: const Icon(Icons.attractions),
               subtitle: const Text('Actions'),
               title: const Text('Actions'),
-              onTap: () {
-                // Añade la pantalla actual al historial y navega a ActionsScreen
-                Get.find<NavigationController>().changeScreen(1);
-              },
+              onTap: () => Get.to((() => const ActionsScreen()),
+                  transition: Transition.noTransition),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -30,6 +40,7 @@ class ComponentsScreen extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: const NavigationBarWidget(),
     );
   }
 }
