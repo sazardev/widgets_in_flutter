@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:widgets_in_flutter/components/actions/widget.screen.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
@@ -26,7 +28,13 @@ class ActionsScreen extends StatelessWidget {
             content: 'Filled buttons',
             components: [
               FilledButton(
+                onPressed: () =>
+                    Get.to((() => const WidgetScreen()), arguments: {
+                  'code': '''FilledButton(
                 onPressed: () {},
+                child: const Text('Filled'),
+              ),'''
+                }),
                 child: const Text('Filled'),
               ),
               InkWell(
@@ -141,32 +149,6 @@ class ActionsScreen extends StatelessWidget {
               IconButton.filledTonal(
                 onPressed: () {},
                 icon: const Icon(Icons.add),
-              ),
-            ],
-          ),
-          CardComponents(
-            content: 'FloatingAction buttons',
-            components: [
-              FloatingActionButton.extended(
-                onPressed: () {},
-                label: const Text('Extended'),
-              ),
-              FloatingActionButton.extended(
-                onPressed: () {},
-                label: const Text('Extended'),
-                icon: const Icon(Icons.add),
-              ),
-              FloatingActionButton(
-                onPressed: () {},
-                child: const Icon(Icons.add),
-              ),
-              FloatingActionButton.large(
-                onPressed: () {},
-                child: const Icon(Icons.add),
-              ),
-              FloatingActionButton.small(
-                onPressed: () {},
-                child: const Icon(Icons.add),
               ),
             ],
           ),

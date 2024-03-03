@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:widgets_in_flutter/components/actions/actions.screen.dart';
+import 'package:widgets_in_flutter/components/actions/widget.controller.dart';
 import 'package:widgets_in_flutter/components/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
 import 'package:widgets_in_flutter/core/routes/routes.dart';
@@ -38,9 +39,8 @@ class MyApp extends StatelessWidget {
           ),
         ],
         initialBinding: BindingsBuilder(() {
-          Get.put(
-            RoutesController(),
-          );
+          Get.put(RoutesController());
+          Get.put(WidgetController());
         }),
       );
     });
