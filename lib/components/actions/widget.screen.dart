@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/arduino-light.dart';
 import 'package:get/get.dart';
 import 'package:widgets_in_flutter/components/actions/widget.controller.dart';
 import 'package:widgets_in_flutter/components/actions/widget.settings.screen.dart';
@@ -31,7 +30,7 @@ class WidgetScreen extends StatelessWidget {
             child: HighlightView(
               code!,
               language: 'dart',
-              theme: arduinoLightTheme,
+              theme: controller.currentHighlightTheme,
               padding: const EdgeInsets.all(12),
               textStyle: TextStyle(
                 fontFamily: 'monospace',
