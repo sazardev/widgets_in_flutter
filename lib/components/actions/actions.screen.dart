@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/actions/widget.screen.dart';
+import 'package:widgets_in_flutter/components/code/code.screen.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
@@ -28,8 +28,7 @@ class ActionsScreen extends StatelessWidget {
             content: 'Filled buttons',
             components: [
               FilledButton(
-                onPressed: () =>
-                    Get.to((() => const WidgetScreen()), arguments: {
+                onPressed: () => Get.to((() => const CodeScreen()), arguments: {
                   'code': '''FilledButton(
                 onPressed: () {},
                 child: const Text('Filled'),

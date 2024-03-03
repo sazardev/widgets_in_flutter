@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/actions/widget.controller.dart';
+import 'package:widgets_in_flutter/components/code/code.controller.dart';
 
-class WidgetSettingsScreen extends StatelessWidget {
-  const WidgetSettingsScreen({super.key});
+class CodeSettingsScreen extends StatelessWidget {
+  const CodeSettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class WidgetSettingsScreen extends StatelessWidget {
         title: const Text('Settings'),
         bottom: PreferredSize(
           preferredSize: const Size(double.infinity, 150),
-          child: GetBuilder<WidgetController>(
+          child: GetBuilder<CodeController>(
             builder: (controller) => Column(
               children: [
                 ListTile(
@@ -46,7 +46,7 @@ class WidgetSettingsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: GetBuilder<WidgetController>(
+      body: GetBuilder<CodeController>(
         builder: (controller) {
           return Column(
             children: [

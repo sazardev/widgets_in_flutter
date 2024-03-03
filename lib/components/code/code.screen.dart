@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/actions/widget.controller.dart';
-import 'package:widgets_in_flutter/components/actions/widget.settings.screen.dart';
+import 'package:widgets_in_flutter/components/code/code.controller.dart';
+import 'package:widgets_in_flutter/components/code/code.settings.screen.dart';
 
-class WidgetScreen extends StatelessWidget {
-  const WidgetScreen({super.key});
+class CodeScreen extends StatelessWidget {
+  const CodeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,12 @@ class WidgetScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              Get.to((() => const WidgetSettingsScreen()));
+              Get.to((() => const CodeSettingsScreen()));
             },
           ),
         ],
       ),
-      body: GetBuilder<WidgetController>(
+      body: GetBuilder<CodeController>(
         builder: (controller) {
           return SingleChildScrollView(
             child: HighlightView(
