@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:widgets_in_flutter/components/code/code.screen.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-material.widget.dart';
@@ -27,9 +29,15 @@ class _SelectionScreenState extends State<SelectionScreen> {
         ],
       ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
         children: [
           CardComponents(
             content: 'Checkboxes',
+            tooltip: 'See code',
+            onPressedTooltip: () =>
+                Get.to(() => const CodeScreen(), arguments: {
+              "code": "Code",
+            }),
             components: [
               CheckboxListTile(
                 value: _selected,
@@ -48,6 +56,11 @@ class _SelectionScreenState extends State<SelectionScreen> {
                     _selected = !onChanged!;
                   });
                 },
+              ),
+              const CheckboxListTile(
+                title: Text('Option Three'),
+                value: false,
+                onChanged: null,
               ),
             ],
           )

@@ -5,10 +5,14 @@ class CardComponents extends StatelessWidget {
     super.key,
     required this.content,
     required this.components,
+    this.tooltip,
+    this.onPressedTooltip,
   });
 
   final String content;
   final List<Widget> components;
+  final String? tooltip;
+  final Function()? onPressedTooltip;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +21,25 @@ class CardComponents extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Text(
-              content,
-              style: const TextStyle(
-                fontSize: 18,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  content,
+                  style: const TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+                if (onPressedTooltip != null)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: IconButton(
+                      tooltip: '',
+                      onPressed: onPressedTooltip,
+                      icon: const Icon(Icons.info_outline),
+                    ),
+                  ),
+              ],
             ),
             const SizedBox(height: 8),
             Wrap(
