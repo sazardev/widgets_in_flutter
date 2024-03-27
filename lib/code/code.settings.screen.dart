@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/code/code.controller.dart';
+import 'package:widgets_in_flutter/code/code.controller.dart';
 
 class CodeSettingsScreen extends StatelessWidget {
   const CodeSettingsScreen({super.key});
