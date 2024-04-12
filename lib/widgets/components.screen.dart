@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/actions/actions.screen.dart';
-import 'package:widgets_in_flutter/components/selections/selection.screen.dart';
+import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
+import 'package:widgets_in_flutter/widgets/selections/selection.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -44,6 +44,18 @@ class ComponentsScreen extends StatelessWidget {
               leading: const Icon(Icons.select_all),
               subtitle: const Text('Selections'),
               title: const Text('Selections'),
+              onTap: () => Get.to((() => const SelectionScreen()),
+                  transition: Transition.noTransition),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.input),
+              subtitle: const Text('Inputs'),
+              title: const Text('Inputs'),
               onTap: () => Get.to((() => const SelectionScreen()),
                   transition: Transition.noTransition),
               shape: RoundedRectangleBorder(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets_in_flutter/components/components.screen.dart';
+import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
 import 'package:widgets_in_flutter/settings/settings.screen.dart';
 
