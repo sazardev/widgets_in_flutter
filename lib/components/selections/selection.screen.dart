@@ -63,7 +63,98 @@ class _SelectionScreenState extends State<SelectionScreen> {
                 onChanged: null,
               ),
             ],
-          )
+          ),
+          CardComponents(
+            content: 'Radio',
+            tooltip: 'See code',
+            onPressedTooltip: () =>
+                Get.to(() => const CodeScreen(), arguments: {
+              "code": "Code",
+            }),
+            components: [
+              RadioListTile(
+                value: _selected,
+                title: const Text('Option One'),
+                onChanged: (onChanged) {
+                  setState(() {
+                    _selected = onChanged!;
+                  });
+                },
+                groupValue: _selected,
+              ),
+              RadioListTile(
+                title: const Text('Option Two'),
+                value: !_selected,
+                onChanged: (onChanged) {
+                  setState(() {
+                    _selected = !onChanged!;
+                  });
+                },
+                groupValue: false,
+              ),
+              const RadioListTile(
+                title: Text('Option Three'),
+                value: false,
+                onChanged: null,
+                groupValue: null,
+              ),
+            ],
+          ),
+          CardComponents(
+            content: 'Chips',
+            components: [
+              ActionChip(
+                label: const Text('Action Chip'),
+                onPressed: () {},
+              ),
+              ActionChip(
+                label: const Text('Action Icon Chip'),
+                onPressed: () {},
+                avatar: const Icon(Icons.add),
+              ),
+              ActionChip.elevated(
+                label: const Text('Elevated Chip'),
+                onPressed: () {},
+              ),
+              ActionChip.elevated(
+                label: const Text('Elevated Icon Chip'),
+                onPressed: () {},
+                avatar: const Icon(Icons.add),
+              ),
+            ],
+          ),
+          CardComponents(
+              tooltip: 'See code',
+              onPressedTooltip: () =>
+                  Get.to(() => const CodeScreen(), arguments: {
+                    "code": "Code",
+                  }),
+              content: 'Pickers',
+              components: [
+                TextButton(
+                  onPressed: () => showDatePicker(
+                    context: context,
+                    firstDate: DateTime(2000),
+                    lastDate: DateTime(2100),
+                  ),
+                  child: const Text('Date picker'),
+                ),
+                TextButton(
+                  onPressed: () => showDateRangePicker(
+                    context: context,
+                    firstDate: DateTime(2000),
+                    lastDate: DateTime(2100),
+                  ),
+                  child: const Text('Date range picker'),
+                ),
+                TextButton(
+                  onPressed: () => showTimePicker(
+                    context: context,
+                    initialTime: TimeOfDay.now(),
+                  ),
+                  child: const Text('Time picker'),
+                ),
+              ])
         ],
       ),
       bottomNavigationBar: const NavigationBarWidget(),
