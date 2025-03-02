@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:widgets_in_flutter/favorites/favorites.screen.dart';
+import 'package:widgets_in_flutter/favorites/favorites.controller.dart';
 import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
             name: Routes.INITIAL,
             page: () => const ComponentsScreen(),
           ),
+          GetPage(name: Routes.FAVORITES, page: () => const FavoritesScreen()),
           GetPage(
             name: Routes.SETTINGS,
             page: () => const SettingsScreen(),
@@ -41,6 +44,7 @@ class MyApp extends StatelessWidget {
         initialBinding: BindingsBuilder(() {
           Get.put(RoutesController());
           Get.put(CodeController());
+          Get.put(FavoritesController()); // Add this line
         }),
       );
     });
