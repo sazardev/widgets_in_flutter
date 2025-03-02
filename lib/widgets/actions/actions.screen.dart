@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-<<<<<<< HEAD:lib/components/actions/actions.screen.dart
-import 'package:widgets_in_flutter/components/code/code.screen.dart';
-import 'package:widgets_in_flutter/components/actions/constant/filled-button.contants.dart';
-=======
 import 'package:widgets_in_flutter/code/code.screen.dart';
->>>>>>> bc0cbf0ec202e0be12f28f6fc03b02cb4cc9db0e:lib/widgets/actions/actions.screen.dart
+import 'package:widgets_in_flutter/components/actions/constant/filled-button.contants.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';

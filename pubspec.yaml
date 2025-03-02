@@ -7,18 +7,18 @@ environment:
   sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
-  animate_do: ^3.3.4
+  animate_do: ^4.2.0
   flutter:
     sdk: flutter
   flutter_highlight: ^0.7.0
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.3
   get: ^4.6.6
   http: ^1.2.0
   shared_preferences: ^2.2.2
   url_launcher: ^6.2.5
 
 dev_dependencies:
-  flutter_lints: ^3.0.1
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
 

@@ -42,9 +42,9 @@ class ThemeSelector extends StatelessWidget {
                   activeColor: entry.key,
                   hoverColor: entry.key.withOpacity(0.1),
                   focusColor: entry.key,
-                  fillColor: MaterialStateProperty.resolveWith<Color>(
-                      (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.disabled)) {
+                  fillColor: WidgetStateProperty.resolveWith<Color>(
+                      (Set<WidgetState> states) {
+                    if (states.contains(WidgetState.disabled)) {
                       return entry.key.withOpacity(.32);
                     }
                     return entry.key;
