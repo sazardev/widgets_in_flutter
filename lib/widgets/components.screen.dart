@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:animate_do/animate_do.dart';
+import 'package:widgets_in_flutter/shared/category_card.widget.dart';
 import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
 import 'package:widgets_in_flutter/widgets/selections/selection.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
@@ -14,53 +16,76 @@ class ComponentsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Components'),
+        title: const Text('Flutter Widgets Gallery'),
         actions: [
           ThemeMaterial(isLandscape: false),
           ThemeBrightness(isLandscape: false),
           ThemeSelector(isLandscape: false),
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8,
-          vertical: 8,
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.attractions),
-              subtitle: const Text('Actions'),
-              title: const Text('Actions'),
-              onTap: () => Get.to((() => const ActionsScreen()),
-                  transition: Transition.noTransition),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: FadeInDown(
+              child: Text(
+                'Explore Flutter Widgets',
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
           ),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.select_all),
-              subtitle: const Text('Selections'),
-              title: const Text('Selections'),
-              onTap: () => Get.to((() => const SelectionScreen()),
-                  transition: Transition.noTransition),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.input),
-              subtitle: const Text('Inputs'),
-              title: const Text('Inputs'),
-              onTap: () => Get.to((() => const SelectionScreen()),
-                  transition: Transition.noTransition),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
+          Expanded(
+            child: GridView.count(
+              padding: const EdgeInsets.all(16.0),
+              crossAxisSpacing: 16,
+              mainAxisSpacing: 16,
+              crossAxisCount: MediaQuery.of(context).size.width > 600 ? 3 : 2,
+              children: [
+                FadeInUp(
+                  delay: const Duration(milliseconds: 100),
+                  child: CategoryCard(
+                    icon: Icons.touch_app,
+                    title: 'Actions',
+                    subtitle: 'Buttons, FABs, and more',
+                    color: Colors.blue.shade100,
+                    onTap: () => Get.to(() => const ActionsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 200),
+                  child: CategoryCard(
+                    icon: Icons.select_all,
+                    title: 'Selections',
+                    subtitle: 'Checkboxes, chips, and more',
+                    color: Colors.green.shade100,
+                    onTap: () => Get.to(() => const SelectionScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 300),
+                  child: CategoryCard(
+                    icon: Icons.input,
+                    title: 'Inputs',
+                    subtitle: 'Text fields and more',
+                    color: Colors.orange.shade100,
+                    onTap: () => Get.to(() => const SelectionScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 400),
+                  child: CategoryCard(
+                    icon: Icons.layers,
+                    title: 'Layout',
+                    subtitle: 'Flex, Grid, and more',
+                    color: Colors.purple.shade100,
+                    onTap: () {},
+                  ),
+                ),
+              ],
             ),
           ),
         ],
