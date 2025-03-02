@@ -1,0 +1,36 @@
+name: Flutter Web Deploy
+
+on:
+  push:
+    branches: [ main ]  # Adjust to your main branch name (main or master)
+  workflow_dispatch:    # Allows manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0'  # Match your Flutter version
+          channel: 'stable'
+      
+      - name: Get dependencies
+        run: flutter pub get
+      
+      - name: Enable web
+        run: flutter config --enable-web
+      
+      - name: Build web
+        run: flutter build web --base-href /widgets_in_flutter/ --release
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          force_orphan: true
