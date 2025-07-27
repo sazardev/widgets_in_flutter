@@ -235,7 +235,7 @@ class _AnimationsScreenState extends State<AnimationsScreen>
             components: [
               Column(
                 children: [
-                  Container(
+                  SizedBox(
                     height: 100,
                     width: 100,
                     child: AnimatedSwitcher(

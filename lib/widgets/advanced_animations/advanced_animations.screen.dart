@@ -546,6 +546,8 @@ class _AdvancedAnimationsScreenState extends State<AdvancedAnimationsScreen>
 }
 
 class StaggeredAnimationDemo extends StatefulWidget {
+  const StaggeredAnimationDemo({super.key});
+
   @override
   State<StaggeredAnimationDemo> createState() => _StaggeredAnimationDemoState();
 }

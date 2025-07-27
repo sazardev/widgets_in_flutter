@@ -194,7 +194,7 @@ class _MaterialScreenState extends State<MaterialScreen>
           CardComponents(
             content: 'Stepper',
             components: [
-              Container(
+              SizedBox(
                 height: 300,
                 child: Stepper(
                   currentStep: _currentStep,
@@ -269,7 +269,7 @@ class _MaterialScreenState extends State<MaterialScreen>
           CardComponents(
             content: 'Tab Bar',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: Column(
                   children: [

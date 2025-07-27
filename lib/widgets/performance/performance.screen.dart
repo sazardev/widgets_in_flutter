@@ -292,7 +292,7 @@ class ConstWidget extends StatelessWidget {
 }
 
 class NonConstWidget extends StatelessWidget {
-  NonConstWidget({super.key});
+  const NonConstWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -308,6 +308,8 @@ class NonConstWidget extends StatelessWidget {
 }
 
 class ValueListenableExample extends StatefulWidget {
+  const ValueListenableExample({super.key});
+
   @override
   State<ValueListenableExample> createState() => _ValueListenableExampleState();
 }

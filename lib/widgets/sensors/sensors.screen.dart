@@ -19,7 +19,7 @@ class _SensorsScreenState extends State<SensorsScreen>
   late AnimationController _wifiController;
   late AnimationController _locationController;
 
-  double _batteryLevel = 0.75;
+  final double _batteryLevel = 0.75;
   bool _isCharging = false;
   String _connectionType = 'WiFi';
   int _signalStrength = 4;

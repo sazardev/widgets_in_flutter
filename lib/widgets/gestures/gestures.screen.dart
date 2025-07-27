@@ -95,7 +95,7 @@ class _GesturesScreenState extends State<GesturesScreen> {
                     ),
                   ),
                   DragTarget<String>(
-                    onAccept: (data) {
+                    onAcceptWithDetails: (data) {
                       setState(() {
                         _gestureMessage = 'Item Dropped!';
                       });
@@ -171,7 +171,7 @@ class _GesturesScreenState extends State<GesturesScreen> {
           CardComponents(
             content: 'Interactive Viewer',
             components: [
-              Container(
+              SizedBox(
                 width: 200,
                 height: 150,
                 child: InteractiveViewer(
@@ -278,7 +278,7 @@ class _GesturesScreenState extends State<GesturesScreen> {
           CardComponents(
             content: 'Dismissible',
             components: [
-              Container(
+              SizedBox(
                 height: 120,
                 child: ListView.builder(
                   itemCount: 3,

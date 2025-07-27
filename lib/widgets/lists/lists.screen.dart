@@ -13,7 +13,7 @@ class ListsScreen extends StatefulWidget {
 }
 
 class _ListsScreenState extends State<ListsScreen> {
-  List<String> _items = List.generate(20, (index) => 'Item ${index + 1}');
+  final List<String> _items = List.generate(20, (index) => 'Item ${index + 1}');
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'Basic ListView',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: ListView.builder(
                   itemCount: 10,
@@ -54,7 +54,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'ListView with Separators',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: ListView.separated(
                   itemCount: 8,
@@ -76,7 +76,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'Horizontal ListView',
             components: [
-              Container(
+              SizedBox(
                 height: 120,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -108,7 +108,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'Basic GridView',
             components: [
-              Container(
+              SizedBox(
                 height: 250,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -147,7 +147,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'GridView with Aspect Ratio',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -186,7 +186,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'GridView.count',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: GridView.count(
                   crossAxisCount: 4,
@@ -217,7 +217,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'Reorderable ListView',
             components: [
-              Container(
+              SizedBox(
                 height: 250,
                 child: ReorderableListView(
                   onReorder: (oldIndex, newIndex) {
@@ -245,7 +245,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'ListView with Different Tile Types',
             components: [
-              Container(
+              SizedBox(
                 height: 250,
                 child: ListView(
                   children: [
@@ -297,7 +297,7 @@ class _ListsScreenState extends State<ListsScreen> {
           CardComponents(
             content: 'Staggered Grid (Custom)',
             components: [
-              Container(
+              SizedBox(
                 height: 250,
                 child: GridView.custom(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

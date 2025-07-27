@@ -50,7 +50,7 @@ class _PlatformScreenState extends State<PlatformScreen> {
                     Text('Current Platform: ${_getCurrentPlatform()}'),
                     Text('Is Mobile: ${_isMobile()}'),
                     Text('Is Desktop: ${_isDesktop()}'),
-                    Text('Is Web: ${kIsWeb}'),
+                    Text('Is Web: $kIsWeb'),
                   ],
                 ),
               ),
@@ -140,7 +140,7 @@ class _PlatformScreenState extends State<PlatformScreen> {
               ),
               const SizedBox(height: 16),
               if (_isIOS()) ...[
-                Container(
+                SizedBox(
                   height: 200,
                   child: CupertinoDatePicker(
                     mode: CupertinoDatePickerMode.dateAndTime,
@@ -156,7 +156,7 @@ class _PlatformScreenState extends State<PlatformScreen> {
           CardComponents(
             content: 'Cupertino Navigation',
             components: [
-              Container(
+              SizedBox(
                 height: 300,
                 child: CupertinoTabScaffold(
                   tabBar: CupertinoTabBar(
@@ -371,9 +371,9 @@ class _PlatformScreenState extends State<PlatformScreen> {
             onPressed: () => Navigator.pop(context),
           ),
           CupertinoDialogAction(
-            child: const Text('OK'),
             onPressed: () => Navigator.pop(context),
             isDefaultAction: true,
+            child: const Text('OK'),
           ),
         ],
       ),

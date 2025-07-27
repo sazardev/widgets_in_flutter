@@ -177,7 +177,7 @@ class _AccessibilityScreenState extends State<AccessibilityScreen> {
           CardComponents(
             content: 'Accessible Navigation',
             components: [
-              Container(
+              SizedBox(
                 height: 60,
                 child: Row(
                   children: [
@@ -356,6 +356,8 @@ class _AccessibilityScreenState extends State<AccessibilityScreen> {
 }
 
 class FocusableActionWidget extends StatefulWidget {
+  const FocusableActionWidget({super.key});
+
   @override
   State<FocusableActionWidget> createState() => _FocusableActionWidgetState();
 }

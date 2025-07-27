@@ -180,7 +180,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
           CardComponents(
             content: 'Stack Layout',
             components: [
-              Container(
+              SizedBox(
                 width: 120,
                 height: 120,
                 child: Stack(
@@ -206,7 +206,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 120,
                 height: 120,
                 child: Stack(

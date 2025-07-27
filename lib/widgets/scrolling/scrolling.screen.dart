@@ -49,7 +49,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'SingleChildScrollView',
             components: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: SingleChildScrollView(
                   child: Column(
@@ -72,7 +72,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Scrollbar',
             components: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: Scrollbar(
                   thumbVisibility: true,
@@ -90,7 +90,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Nested ScrollView',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: NestedScrollView(
                   headerSliverBuilder: (context, innerBoxIsScrolled) => [
@@ -117,7 +117,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Custom ScrollView',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: CustomScrollView(
                   slivers: [
@@ -156,7 +156,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Sliver Grid',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: CustomScrollView(
                   slivers: [
@@ -189,7 +189,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Sliver to Box Adapter',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: CustomScrollView(
                   slivers: [
@@ -221,7 +221,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Refresh Indicator',
             components: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: RefreshIndicator(
                   onRefresh: () async {
@@ -241,7 +241,7 @@ class _ScrollingScreenState extends State<ScrollingScreen> {
           CardComponents(
             content: 'Scroll Configuration',
             components: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: ScrollConfiguration(
                   behavior: ScrollConfiguration.of(context).copyWith(

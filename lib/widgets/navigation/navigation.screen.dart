@@ -46,7 +46,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'App Bars',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: Scaffold(
                   appBar: AppBar(
@@ -68,7 +68,7 @@ class _NavigationScreenState extends State<NavigationScreen>
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 200,
                 child: Scaffold(
                   appBar: AppBar(
@@ -97,7 +97,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'Bottom Navigation',
             components: [
-              Container(
+              SizedBox(
                 height: 100,
                 child: BottomNavigationBar(
                   currentIndex: _selectedIndex,
@@ -122,7 +122,7 @@ class _NavigationScreenState extends State<NavigationScreen>
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 100,
                 child: NavigationBar(
                   selectedIndex: _selectedIndex,
@@ -153,7 +153,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'Tab Bars',
             components: [
-              Container(
+              SizedBox(
                 height: 150,
                 child: DefaultTabController(
                   length: 4,
@@ -182,7 +182,7 @@ class _NavigationScreenState extends State<NavigationScreen>
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 150,
                 child: DefaultTabController(
                   length: 3,
@@ -216,7 +216,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'Drawers',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: Scaffold(
                   appBar: AppBar(
@@ -266,7 +266,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'Page View',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: PageView(
                   children: [
@@ -305,7 +305,7 @@ class _NavigationScreenState extends State<NavigationScreen>
           CardComponents(
             content: 'Navigation Rail',
             components: [
-              Container(
+              SizedBox(
                 height: 200,
                 child: Row(
                   children: [
@@ -339,7 +339,7 @@ class _NavigationScreenState extends State<NavigationScreen>
                     Expanded(
                       child: Center(
                         child: Text(
-                          'Selected: ${_selectedIndex}',
+                          'Selected: $_selectedIndex',
                           style: const TextStyle(fontSize: 16),
                         ),
                       ),
