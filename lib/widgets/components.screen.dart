@@ -9,6 +9,8 @@ import 'package:widgets_in_flutter/widgets/navigation/navigation.screen.dart';
 import 'package:widgets_in_flutter/widgets/text/text.screen.dart';
 import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
 import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
+import 'package:widgets_in_flutter/widgets/lists/lists.screen.dart';
+import 'package:widgets_in_flutter/widgets/animations/animations.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -121,6 +123,28 @@ class ComponentsScreen extends StatelessWidget {
                     subtitle: 'Container, Column, Row, Stack',
                     color: Colors.teal.shade100,
                     onTap: () => Get.to(() => const LayoutScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 800),
+                  child: CategoryCard(
+                    icon: Icons.list,
+                    title: 'Lists & Grids',
+                    subtitle: 'ListView, GridView, Reorderable',
+                    color: Colors.cyan.shade100,
+                    onTap: () => Get.to(() => const ListsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 900),
+                  child: CategoryCard(
+                    icon: Icons.animation,
+                    title: 'Animations',
+                    subtitle: 'AnimatedContainer, Hero, Transitions',
+                    color: Colors.deepPurple.shade100,
+                    onTap: () => Get.to(() => const AnimationsScreen(),
                         transition: Transition.fadeIn),
                   ),
                 ),

@@ -8,6 +8,8 @@ import 'package:widgets_in_flutter/widgets/navigation/navigation.screen.dart';
 import 'package:widgets_in_flutter/widgets/text/text.screen.dart';
 import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
 import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
+import 'package:widgets_in_flutter/widgets/lists/lists.screen.dart';
+import 'package:widgets_in_flutter/widgets/animations/animations.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -64,6 +66,14 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_LAYOUT,
             page: () => const LayoutScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_LISTS,
+            page: () => const ListsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_ANIMATIONS,
+            page: () => const AnimationsScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {

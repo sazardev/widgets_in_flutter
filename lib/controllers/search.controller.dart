@@ -198,6 +198,46 @@ class GetSearchController extends GetxController {
       {'name': 'Expanded', 'category': 'layout', 'route': '/components/layout'},
       {'name': 'Flexible', 'category': 'layout', 'route': '/components/layout'},
       {'name': 'SizedBox', 'category': 'layout', 'route': '/components/layout'},
+      // Lists widgets
+      {'name': 'ListView', 'category': 'lists', 'route': '/components/lists'},
+      {'name': 'GridView', 'category': 'lists', 'route': '/components/lists'},
+      {'name': 'ListTile', 'category': 'lists', 'route': '/components/lists'},
+      {
+        'name': 'ReorderableListView',
+        'category': 'lists',
+        'route': '/components/lists'
+      },
+      {
+        'name': 'ExpansionTile',
+        'category': 'lists',
+        'route': '/components/lists'
+      },
+      // Animation widgets
+      {
+        'name': 'AnimatedContainer',
+        'category': 'animations',
+        'route': '/components/animations'
+      },
+      {
+        'name': 'AnimatedOpacity',
+        'category': 'animations',
+        'route': '/components/animations'
+      },
+      {
+        'name': 'Hero',
+        'category': 'animations',
+        'route': '/components/animations'
+      },
+      {
+        'name': 'SlideTransition',
+        'category': 'animations',
+        'route': '/components/animations'
+      },
+      {
+        'name': 'AnimatedSwitcher',
+        'category': 'animations',
+        'route': '/components/animations'
+      },
     ]);
   }
 

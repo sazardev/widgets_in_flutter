@@ -58,17 +58,19 @@ Crear la **galería de widgets de Flutter más completa del mundo**, cubriendo t
 - **Selections** (9/15): Checkboxes, Radio buttons, Chips, Dialogs, Date/Time Pickers
 - **Inputs** (6/12): TextField, TextFormField, Switch, Slider, RangeSlider, Stepper  
 - **Navigation** (7/18): AppBar, BottomNavigationBar, NavigationBar, TabBar, Drawer, PageView, NavigationRail
-- **Text** (6/6): Text, RichText, SelectableText, TextThemes, Decorations, Alignment ✅ NEW!
-- **Images & Icons** (8/8): Image, Icon, CircleAvatar, NetworkImage, AssetImage, IconButton, IconTheme ✅ NEW!
-- **Layout** (15/15): Container, Padding, Column, Row, Stack, Wrap, Center, Align, Expanded, Flexible, SizedBox ✅ NEW!
+- **Text** (6/6): Text, RichText, SelectableText, TextThemes, Decorations, Alignment ✅ COMPLETED!
+- **Images & Icons** (8/8): Image, Icon, CircleAvatar, NetworkImage, AssetImage, IconButton, IconTheme ✅ COMPLETED!
+- **Layout** (15/15): Container, Padding, Column, Row, Stack, Wrap, Center, Align, Expanded, Flexible, SizedBox ✅ COMPLETED!
+- **Lists & Grids** (8/12): ListView, GridView, ListTile, ReorderableListView, ExpansionTile ✅ NEW!
+- **Animations** (8/20): AnimatedContainer, AnimatedOpacity, Hero, SlideTransition, AnimatedSwitcher ✅ NEW!
 - **Core Features**: Navigation, Search, Themes, Code Display
 
 ### 🔥 **Coming Soon**
 - **Complete Actions**: Badge, Tooltip, SegmentedButton
 - **Complete Inputs**: Form, SearchBar, SearchAnchor
 - **Complete Navigation**: Tabs with more variants, Stepper navigation
-- **Lists & Grids**: ListView, GridView, ReorderableListView
-- **Animations**: AnimatedContainer, Hero, Transition widgets
+- **Complete Lists**: More ListView variants, Custom ScrollView
+- **Complete Animations**: More transition widgets, Custom animations
 - **Interactive Playground**: Modify widget properties in real-time
 - **Complete Widget Coverage**: All 200+ Flutter widgets
 - **Widget Relationships**: See related widgets and alternatives
@@ -117,9 +119,11 @@ widgets_in_flutter/
 │   │   ├── 📁 selections/    # Selection widgets (9 implemented)
 │   │   ├── 📁 inputs/        # Input widgets (6 implemented)
 │   │   ├── 📁 navigation/    # Navigation widgets (7 implemented)
-│   │   ├── 📁 text/          # Text widgets (6 implemented) ✅ NEW!
-│   │   ├── 📁 images/        # Image widgets (8 implemented) ✅ NEW!
-│   │   └── 📁 layout/        # Layout widgets (15 implemented) ✅ NEW!
+│   │   ├── 📁 text/          # Text widgets (6 implemented) ✅ COMPLETED!
+│   │   ├── 📁 images/        # Image widgets (8 implemented) ✅ COMPLETED!
+│   │   ├── 📁 layout/        # Layout widgets (15 implemented) ✅ COMPLETED!
+│   │   ├── 📁 lists/         # Lists & Grids widgets (8 implemented) ✅ NEW!
+│   │   └── 📁 animations/    # Animation widgets (8 implemented) ✅ NEW!
 │   ├── 📁 components/        # Widget constants and helpers
 │   ├── 📁 favorites/         # Favorites system
 │   ├── 📁 controllers/       # State management
@@ -237,9 +241,9 @@ git push origin feature/layout-widgets
 Nuestro objetivo es ser la galería más completa de widgets de Flutter. Aquí está nuestro plan maestro:
 
 ### 🎯 Estado Actual (Julio 2025)
-**Progreso General: 35% completado** 📊
+**Progreso General: 45% completado** 📊
 
-#### ✅ **IMPLEMENTADO** (Widgets cubiertos: ~70)
+#### ✅ **IMPLEMENTADO** (Widgets cubiertos: ~95)
 - **Actions (9/12)**: FilledButton, OutlinedButton, ElevatedButton, TextButton, IconButton, FloatingActionButton, DropdownButton, PopupMenuButton, MenuAnchor
 - **Selections (9/15)**: Checkbox, Radio, ActionChip, ChoiceChip, FilterChip, Dialog variants, Date/Time Pickers
 - **Inputs (6/12)**: TextField, TextFormField, Switch, Slider, RangeSlider, Stepper
@@ -247,12 +251,16 @@ Nuestro objetivo es ser la galería más completa de widgets de Flutter. Aquí e
 - **Text (6/6)**: Text, RichText, SelectableText, TextThemes, Decorations, Alignment ✅ COMPLETED!
 - **Images & Icons (8/8)**: Image, Icon, CircleAvatar, NetworkImage, AssetImage, IconButton, IconTheme ✅ COMPLETED!
 - **Layout (15/15)**: Container, Padding, Column, Row, Stack, Wrap, Center, Align, Expanded, Flexible, SizedBox ✅ COMPLETED!
+- **Lists & Grids (8/12)**: ListView, GridView, ListTile, ReorderableListView, ExpansionTile ✅ NEW!
+- **Animations (8/20)**: AnimatedContainer, AnimatedOpacity, Hero, SlideTransition, AnimatedSwitcher ✅ NEW!
 - **Core Features**: Navegación, Favoritos, Búsqueda, Temas, Code Viewer
 
 #### 🚧 **EN DESARROLLO INMEDIATO** (Próximas 2 semanas)
 - [x] **Text & Rich Text**: Text, RichText, SelectableText, TextThemes, Decorations ✅ DONE!
 - [x] **Images & Icons**: Image, Icon, CircleAvatar, NetworkImage, AssetImage, IconButton ✅ DONE!
 - [x] **Layout Basics**: Container, Padding, Column, Row, Stack, Wrap, Center, Align ✅ DONE!
+- [x] **Lists & Grids Basics**: ListView, GridView, ListTile, ReorderableListView ✅ DONE!
+- [x] **Animations Basics**: AnimatedContainer, Hero, Transitions ✅ DONE!
 
 ### 🏗️ **ROADMAP POR CATEGORÍAS** (Orden de prioridad)
 
@@ -266,17 +274,17 @@ Nuestro objetivo es ser la galería más completa de widgets de Flutter. Aquí e
 - [x] **Layout Basics** (15 widgets) ✅ DONE!
   - [x] Container, Padding, Margin, Column, Row, Stack, etc.
 
-#### **FASE 2: Navegación y Estructura** (Meses 3-4)
-- [ ] **App Structure** (10 widgets)
-  - [ ] Scaffold, AppBar, BottomNavigationBar, Drawer, etc.
+#### **FASE 2: Navegación y Estructura** (Meses 3-4) 🚧 EN PROGRESO
+- [x] **App Structure** (7/10 widgets) ✅ MOSTLY DONE!
+  - [x] Scaffold, AppBar, BottomNavigationBar, Drawer, etc.
 - [ ] **Navigation** (8 widgets)
   - [ ] TabBar, PageView, IndexedStack, etc.
-- [ ] **List & Grid** (12 widgets)
-  - [ ] ListView, GridView, ReorderableListView, etc.
+- [x] **List & Grid** (8/12 widgets) ✅ STARTED!
+  - [x] ListView, GridView, ReorderableListView, etc.
 
-#### **FASE 3: Avanzados** (Meses 5-6)
-- [ ] **Animations** (20 widgets)
-  - [ ] AnimatedContainer, Hero, Transition widgets, etc.
+#### **FASE 3: Avanzados** (Meses 5-6) 🚧 EN PROGRESO
+- [x] **Animations** (8/20 widgets) ✅ STARTED!
+  - [x] AnimatedContainer, Hero, Transition widgets, etc.
 - [ ] **Custom Paint** (8 widgets)
   - [ ] CustomPaint, Canvas widgets, etc.
 - [ ] **Gestures** (15 widgets)
@@ -321,13 +329,13 @@ Nuestro objetivo es ser la galería más completa de widgets de Flutter. Aquí e
 | **Text** | 6 | 6 | 6 |
 | **Images** | 8 | 8 | 8 |
 | **Layout** | 25 | 15 | 15 |
-| **Lists** | 12 | 0 | 8 |
-| **Animations** | 20 | 0 | 5 |
+| **Lists** | 12 | 8 | 8 |
+| **Animations** | 20 | 8 | 8 |
 | **Gestures** | 15 | 0 | 3 |
 | **Slivers** | 12 | 0 | 0 |
 | **Platform** | 10 | 0 | 0 |
 | **Otros** | 35 | 0 | 5 |
-| **TOTAL** | **200+** | **70** | **107** |
+| **TOTAL** | **200+** | **95** | **110** |
 
 ### 🎯 **HITOS IMPORTANTES**
 
@@ -353,10 +361,15 @@ Nuestro objetivo es ser la galería más completa de widgets de Flutter. Aquí e
 - [x] Implementar categoría Images & Icons
 - [x] Agregar categoría Layout completa
 
-**Sprint 2 (Próximas 2 semanas)**:
+**Sprint 2 (COMPLETADO ✅)**:
+- [x] Implementar Lists & Grids básicos (ListView, GridView, ReorderableListView)
+- [x] Implementar Animations básicas (AnimatedContainer, Hero, Transitions)
+- [x] Actualizar sistema de navegación y búsqueda
+
+**Sprint 3 (Próximas 2 semanas)**:
 - Completar Actions widgets restantes (Badge, Tooltip, SegmentedButton)
 - Completar Inputs widgets restantes (Form, SearchBar, SearchAnchor)
-- Empezar Lists & Grids (ListView, GridView básicos)
+- Agregar más Animation widgets (FadeTransition, ScaleTransition, etc.)
 
 Ver el [board de desarrollo](https://github.com/CerberusProgrammer/widgets_in_flutter/projects) para seguimiento detallado.
 

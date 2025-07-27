@@ -119,6 +119,10 @@ class SearchScreen extends StatelessWidget {
         return Colors.pink;
       case 'layout':
         return Colors.teal;
+      case 'lists':
+        return Colors.cyan;
+      case 'animations':
+        return Colors.deepPurple;
       default:
         return Colors.grey;
     }
