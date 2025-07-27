@@ -238,6 +238,224 @@ class GetSearchController extends GetxController {
         'category': 'animations',
         'route': '/components/animations'
       },
+      // Forms widgets
+      {'name': 'Form', 'category': 'forms', 'route': '/components/forms'},
+      {'name': 'FormField', 'category': 'forms', 'route': '/components/forms'},
+      {
+        'name': 'TextFormField',
+        'category': 'forms',
+        'route': '/components/forms'
+      },
+      {'name': 'Validator', 'category': 'forms', 'route': '/components/forms'},
+      // Material widgets
+      {'name': 'Card', 'category': 'material', 'route': '/components/material'},
+      {
+        'name': 'Surface',
+        'category': 'material',
+        'route': '/components/material'
+      },
+      {
+        'name': 'Material',
+        'category': 'material',
+        'route': '/components/material'
+      },
+      {
+        'name': 'Scaffold',
+        'category': 'material',
+        'route': '/components/material'
+      },
+      {
+        'name': 'BottomSheet',
+        'category': 'material',
+        'route': '/components/material'
+      },
+      // Gestures widgets
+      {
+        'name': 'GestureDetector',
+        'category': 'gestures',
+        'route': '/components/gestures'
+      },
+      {
+        'name': 'InkWell',
+        'category': 'gestures',
+        'route': '/components/gestures'
+      },
+      {
+        'name': 'Draggable',
+        'category': 'gestures',
+        'route': '/components/gestures'
+      },
+      {
+        'name': 'LongPressDraggable',
+        'category': 'gestures',
+        'route': '/components/gestures'
+      },
+      // Scrolling widgets
+      {
+        'name': 'SingleChildScrollView',
+        'category': 'scrolling',
+        'route': '/components/scrolling'
+      },
+      {
+        'name': 'CustomScrollView',
+        'category': 'scrolling',
+        'route': '/components/scrolling'
+      },
+      {
+        'name': 'NestedScrollView',
+        'category': 'scrolling',
+        'route': '/components/scrolling'
+      },
+      {
+        'name': 'RefreshIndicator',
+        'category': 'scrolling',
+        'route': '/components/scrolling'
+      },
+      // Media widgets
+      {'name': 'MediaQuery', 'category': 'media', 'route': '/components/media'},
+      {
+        'name': 'LayoutBuilder',
+        'category': 'media',
+        'route': '/components/media'
+      },
+      {
+        'name': 'OrientationBuilder',
+        'category': 'media',
+        'route': '/components/media'
+      },
+      {
+        'name': 'AspectRatio',
+        'category': 'media',
+        'route': '/components/media'
+      },
+      // Platform widgets
+      {
+        'name': 'Theme',
+        'category': 'platform',
+        'route': '/components/platform'
+      },
+      {
+        'name': 'Platform',
+        'category': 'platform',
+        'route': '/components/platform'
+      },
+      {
+        'name': 'CupertinoButton',
+        'category': 'platform',
+        'route': '/components/platform'
+      },
+      {
+        'name': 'AdaptiveIcon',
+        'category': 'platform',
+        'route': '/components/platform'
+      },
+      // Sensors widgets
+      {
+        'name': 'Battery',
+        'category': 'sensors',
+        'route': '/components/sensors'
+      },
+      {
+        'name': 'Location',
+        'category': 'sensors',
+        'route': '/components/sensors'
+      },
+      {
+        'name': 'Connectivity',
+        'category': 'sensors',
+        'route': '/components/sensors'
+      },
+      {
+        'name': 'DeviceInfo',
+        'category': 'sensors',
+        'route': '/components/sensors'
+      },
+      {
+        'name': 'Accelerometer',
+        'category': 'sensors',
+        'route': '/components/sensors'
+      },
+      // Accessibility widgets
+      {
+        'name': 'Semantics',
+        'category': 'accessibility',
+        'route': '/components/accessibility'
+      },
+      {
+        'name': 'ExcludeSemantics',
+        'category': 'accessibility',
+        'route': '/components/accessibility'
+      },
+      {
+        'name': 'MergeSemantics',
+        'category': 'accessibility',
+        'route': '/components/accessibility'
+      },
+      {
+        'name': 'Tooltip',
+        'category': 'accessibility',
+        'route': '/components/accessibility'
+      },
+      // Performance widgets
+      {
+        'name': 'ListView.builder',
+        'category': 'performance',
+        'route': '/components/performance'
+      },
+      {
+        'name': 'GridView.builder',
+        'category': 'performance',
+        'route': '/components/performance'
+      },
+      {
+        'name': 'RepaintBoundary',
+        'category': 'performance',
+        'route': '/components/performance'
+      },
+      {
+        'name': 'AutomaticKeepAlive',
+        'category': 'performance',
+        'route': '/components/performance'
+      },
+      // Advanced Animations widgets
+      {
+        'name': 'TweenAnimationBuilder',
+        'category': 'advanced_animations',
+        'route': '/components/advanced_animations'
+      },
+      {
+        'name': 'AnimationController',
+        'category': 'advanced_animations',
+        'route': '/components/advanced_animations'
+      },
+      {
+        'name': 'CustomTween',
+        'category': 'advanced_animations',
+        'route': '/components/advanced_animations'
+      },
+      {
+        'name': 'Physics',
+        'category': 'advanced_animations',
+        'route': '/components/advanced_animations'
+      },
+      // Paint widgets
+      {
+        'name': 'CustomPaint',
+        'category': 'paint',
+        'route': '/components/paint'
+      },
+      {
+        'name': 'CustomPainter',
+        'category': 'paint',
+        'route': '/components/paint'
+      },
+      {'name': 'Canvas', 'category': 'paint', 'route': '/components/paint'},
+      {'name': 'Paint', 'category': 'paint', 'route': '/components/paint'},
+      // State Management widgets
+      {'name': 'GetX', 'category': 'state', 'route': '/components/state'},
+      {'name': 'Obx', 'category': 'state', 'route': '/components/state'},
+      {'name': 'GetBuilder', 'category': 'state', 'route': '/components/state'},
+      {'name': 'Provider', 'category': 'state', 'route': '/components/state'},
     ]);
   }
 

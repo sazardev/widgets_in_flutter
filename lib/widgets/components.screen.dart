@@ -11,6 +11,18 @@ import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
 import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
 import 'package:widgets_in_flutter/widgets/lists/lists.screen.dart';
 import 'package:widgets_in_flutter/widgets/animations/animations.screen.dart';
+import 'package:widgets_in_flutter/widgets/forms/forms.screen.dart';
+import 'package:widgets_in_flutter/widgets/material/material.screen.dart';
+import 'package:widgets_in_flutter/widgets/gestures/gestures.screen.dart';
+import 'package:widgets_in_flutter/widgets/scrolling/scrolling.screen.dart';
+import 'package:widgets_in_flutter/widgets/media/media.screen.dart';
+import 'package:widgets_in_flutter/widgets/platform/platform.screen.dart';
+import 'package:widgets_in_flutter/widgets/sensors/sensors.screen.dart';
+import 'package:widgets_in_flutter/widgets/accessibility/accessibility.screen.dart';
+import 'package:widgets_in_flutter/widgets/performance/performance.screen.dart';
+import 'package:widgets_in_flutter/widgets/advanced_animations/advanced_animations.screen.dart';
+import 'package:widgets_in_flutter/widgets/paint/paint.screen.dart';
+import 'package:widgets_in_flutter/widgets/state/state.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -47,7 +59,12 @@ class ComponentsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              crossAxisCount: MediaQuery.of(context).size.width > 600 ? 3 : 2,
+              crossAxisCount: MediaQuery.of(context).size.width > 900
+                  ? 4
+                  : MediaQuery.of(context).size.width > 600
+                      ? 3
+                      : 2,
+              childAspectRatio: 1.1,
               children: [
                 FadeInUp(
                   delay: const Duration(milliseconds: 100),
@@ -145,6 +162,138 @@ class ComponentsScreen extends StatelessWidget {
                     subtitle: 'AnimatedContainer, Hero, Transitions',
                     color: Colors.deepPurple.shade100,
                     onTap: () => Get.to(() => const AnimationsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1000),
+                  child: CategoryCard(
+                    icon: Icons.dynamic_form,
+                    title: 'Forms',
+                    subtitle: 'TextFormField, Validation, Forms',
+                    color: Colors.amber.shade100,
+                    onTap: () => Get.to(() => const FormsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1100),
+                  child: CategoryCard(
+                    icon: Icons.design_services,
+                    title: 'Material Design',
+                    subtitle: 'Cards, Surfaces, Material widgets',
+                    color: Colors.lightBlue.shade100,
+                    onTap: () => Get.to(() => const MaterialScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1200),
+                  child: CategoryCard(
+                    icon: Icons.touch_app,
+                    title: 'Gestures',
+                    subtitle: 'Tap, Drag, Pan, Long Press',
+                    color: Colors.red.shade100,
+                    onTap: () => Get.to(() => const GesturesScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1300),
+                  child: CategoryCard(
+                    icon: Icons.view_list,
+                    title: 'Scrolling',
+                    subtitle: 'PageView, NestedScroll, Refresh',
+                    color: Colors.lime.shade100,
+                    onTap: () => Get.to(() => const ScrollingScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1400),
+                  child: CategoryCard(
+                    icon: Icons.devices,
+                    title: 'Media & Responsive',
+                    subtitle: 'MediaQuery, Responsive layouts',
+                    color: Colors.brown.shade100,
+                    onTap: () => Get.to(() => const MediaScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1500),
+                  child: CategoryCard(
+                    icon: Icons.phonelink,
+                    title: 'Platform',
+                    subtitle: 'iOS/Android specific widgets',
+                    color: Colors.grey.shade300,
+                    onTap: () => Get.to(() => const PlatformScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1600),
+                  child: CategoryCard(
+                    icon: Icons.sensors,
+                    title: 'Sensors & Device',
+                    subtitle: 'Battery, Location, Accelerometer',
+                    color: Colors.deepOrange.shade100,
+                    onTap: () => Get.to(() => const SensorsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1700),
+                  child: CategoryCard(
+                    icon: Icons.accessibility,
+                    title: 'Accessibility',
+                    subtitle: 'Semantics, Screen readers',
+                    color: Colors.lightGreen.shade100,
+                    onTap: () => Get.to(() => const AccessibilityScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1800),
+                  child: CategoryCard(
+                    icon: Icons.speed,
+                    title: 'Performance',
+                    subtitle: 'Optimization, ListView.builder',
+                    color: Colors.yellow.shade100,
+                    onTap: () => Get.to(() => const PerformanceScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 1900),
+                  child: CategoryCard(
+                    icon: Icons.auto_awesome,
+                    title: 'Advanced Animations',
+                    subtitle: 'Custom animations, Physics',
+                    color: Colors.purple.shade200,
+                    onTap: () => Get.to(() => const AdvancedAnimationsScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2000),
+                  child: CategoryCard(
+                    icon: Icons.palette,
+                    title: 'Custom Paint',
+                    subtitle: 'CustomPainter, Canvas drawing',
+                    color: Colors.blueGrey.shade100,
+                    onTap: () => Get.to(() => const CustomPaintScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2100),
+                  child: CategoryCard(
+                    icon: Icons.settings_applications,
+                    title: 'State Management',
+                    subtitle: 'GetX, Provider, Bloc patterns',
+                    color: Colors.indigo.shade200,
+                    onTap: () => Get.to(() => const StateManagementScreen(),
                         transition: Transition.fadeIn),
                   ),
                 ),

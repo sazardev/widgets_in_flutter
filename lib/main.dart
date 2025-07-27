@@ -10,6 +10,19 @@ import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
 import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
 import 'package:widgets_in_flutter/widgets/lists/lists.screen.dart';
 import 'package:widgets_in_flutter/widgets/animations/animations.screen.dart';
+import 'package:widgets_in_flutter/widgets/gestures/gestures.screen.dart';
+import 'package:widgets_in_flutter/widgets/scrolling/scrolling.screen.dart';
+import 'package:widgets_in_flutter/widgets/forms/forms.screen.dart';
+import 'package:widgets_in_flutter/widgets/material/material.screen.dart';
+import 'package:widgets_in_flutter/widgets/media/media.screen.dart';
+import 'package:widgets_in_flutter/widgets/paint/paint.screen.dart';
+import 'package:widgets_in_flutter/widgets/performance/performance.screen.dart';
+import 'package:widgets_in_flutter/widgets/accessibility/accessibility.screen.dart';
+import 'package:widgets_in_flutter/widgets/platform/platform.screen.dart';
+import 'package:widgets_in_flutter/widgets/state/state.screen.dart'
+    hide ThemeController;
+import 'package:widgets_in_flutter/widgets/advanced_animations/advanced_animations.screen.dart';
+import 'package:widgets_in_flutter/widgets/sensors/sensors.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -74,6 +87,54 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_ANIMATIONS,
             page: () => const AnimationsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_GESTURES,
+            page: () => const GesturesScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_SCROLLING,
+            page: () => const ScrollingScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_FORMS,
+            page: () => const FormsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_MATERIAL,
+            page: () => const MaterialScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_MEDIA,
+            page: () => const MediaScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_PAINT,
+            page: () => const CustomPaintScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_PERFORMANCE,
+            page: () => const PerformanceScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_ACCESSIBILITY,
+            page: () => const AccessibilityScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_PLATFORM,
+            page: () => const PlatformScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_STATE,
+            page: () => const StateManagementScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_ADVANCED_ANIMATIONS,
+            page: () => const AdvancedAnimationsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_SENSORS,
+            page: () => const SensorsScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {
