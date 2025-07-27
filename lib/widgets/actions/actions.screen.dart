@@ -151,6 +151,146 @@ class ActionsScreen extends StatelessWidget {
               ),
             ],
           ),
+          CardComponents(
+            content: 'Floating Action Buttons',
+            components: [
+              FloatingActionButton(
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              ),
+              FloatingActionButton.small(
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              ),
+              FloatingActionButton.large(
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              ),
+              FloatingActionButton.extended(
+                onPressed: () {},
+                label: const Text('Extended'),
+                icon: const Icon(Icons.add),
+              ),
+            ],
+          ),
+          CardComponents(
+            content: 'Dropdown Buttons',
+            components: [
+              DropdownButton<String>(
+                value: 'Option 1',
+                items: ['Option 1', 'Option 2', 'Option 3']
+                    .map((String value) => DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        ))
+                    .toList(),
+                onChanged: (String? newValue) {},
+              ),
+              DropdownButtonFormField<String>(
+                value: 'Option 1',
+                decoration: const InputDecoration(
+                  labelText: 'Select Option',
+                  border: OutlineInputBorder(),
+                ),
+                items: ['Option 1', 'Option 2', 'Option 3']
+                    .map((String value) => DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        ))
+                    .toList(),
+                onChanged: (String? newValue) {},
+              ),
+            ],
+          ),
+          CardComponents(
+            content: 'Popup Menu Buttons',
+            components: [
+              PopupMenuButton<String>(
+                icon: const Icon(Icons.more_vert),
+                onSelected: (String value) {},
+                itemBuilder: (BuildContext context) => [
+                  const PopupMenuItem(
+                    value: 'edit',
+                    child: ListTile(
+                      leading: Icon(Icons.edit),
+                      title: Text('Edit'),
+                    ),
+                  ),
+                  const PopupMenuItem(
+                    value: 'delete',
+                    child: ListTile(
+                      leading: Icon(Icons.delete),
+                      title: Text('Delete'),
+                    ),
+                  ),
+                  const PopupMenuItem(
+                    value: 'share',
+                    child: ListTile(
+                      leading: Icon(Icons.share),
+                      title: Text('Share'),
+                    ),
+                  ),
+                ],
+              ),
+              PopupMenuButton<String>(
+                child: const FilledButton(
+                  onPressed: null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text('Menu'),
+                      Icon(Icons.arrow_drop_down),
+                    ],
+                  ),
+                ),
+                onSelected: (String value) {},
+                itemBuilder: (BuildContext context) => [
+                  const PopupMenuItem(
+                      value: 'option1', child: Text('Option 1')),
+                  const PopupMenuItem(
+                      value: 'option2', child: Text('Option 2')),
+                  const PopupMenuItem(
+                      value: 'option3', child: Text('Option 3')),
+                ],
+              ),
+            ],
+          ),
+          CardComponents(
+            content: 'Menu Anchor Buttons',
+            components: [
+              MenuAnchor(
+                builder: (context, controller, child) {
+                  return FilledButton(
+                    onPressed: () {
+                      if (controller.isOpen) {
+                        controller.close();
+                      } else {
+                        controller.open();
+                      }
+                    },
+                    child: const Text('Show Menu'),
+                  );
+                },
+                menuChildren: [
+                  MenuItemButton(
+                    leadingIcon: const Icon(Icons.home),
+                    child: const Text('Home'),
+                    onPressed: () {},
+                  ),
+                  MenuItemButton(
+                    leadingIcon: const Icon(Icons.settings),
+                    child: const Text('Settings'),
+                    onPressed: () {},
+                  ),
+                  MenuItemButton(
+                    leadingIcon: const Icon(Icons.logout),
+                    child: const Text('Logout'),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
       bottomNavigationBar: const NavigationBarWidget(),

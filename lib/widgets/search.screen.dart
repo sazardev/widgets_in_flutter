@@ -111,8 +111,16 @@ class SearchScreen extends StatelessWidget {
         return Colors.green;
       case 'inputs':
         return Colors.orange;
-      default:
+      case 'navigation':
         return Colors.purple;
+      case 'text':
+        return Colors.indigo;
+      case 'images':
+        return Colors.pink;
+      case 'layout':
+        return Colors.teal;
+      default:
+        return Colors.grey;
     }
   }
 }

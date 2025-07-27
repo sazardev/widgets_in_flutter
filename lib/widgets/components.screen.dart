@@ -4,6 +4,11 @@ import 'package:animate_do/animate_do.dart';
 import 'package:widgets_in_flutter/shared/category_card.widget.dart';
 import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
 import 'package:widgets_in_flutter/widgets/selections/selection.screen.dart';
+import 'package:widgets_in_flutter/widgets/inputs/inputs.screen.dart';
+import 'package:widgets_in_flutter/widgets/navigation/navigation.screen.dart';
+import 'package:widgets_in_flutter/widgets/text/text.screen.dart';
+import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
+import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -71,18 +76,52 @@ class ComponentsScreen extends StatelessWidget {
                     title: 'Inputs',
                     subtitle: 'Text fields and more',
                     color: Colors.orange.shade100,
-                    onTap: () => Get.to(() => const SelectionScreen(),
+                    onTap: () => Get.to(() => const InputsScreen(),
                         transition: Transition.fadeIn),
                   ),
                 ),
                 FadeInUp(
                   delay: const Duration(milliseconds: 400),
                   child: CategoryCard(
+                    icon: Icons.navigation,
+                    title: 'Navigation',
+                    subtitle: 'AppBar, Tabs, Drawers',
+                    color: Colors.purple.shade100,
+                    onTap: () => Get.to(() => const NavigationScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 500),
+                  child: CategoryCard(
+                    icon: Icons.text_fields,
+                    title: 'Text',
+                    subtitle: 'Text, RichText, SelectableText',
+                    color: Colors.indigo.shade100,
+                    onTap: () => Get.to(() => const TextScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 600),
+                  child: CategoryCard(
+                    icon: Icons.image,
+                    title: 'Images & Icons',
+                    subtitle: 'Images, Icons, Avatars',
+                    color: Colors.pink.shade100,
+                    onTap: () => Get.to(() => const ImagesScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 700),
+                  child: CategoryCard(
                     icon: Icons.layers,
                     title: 'Layout',
-                    subtitle: 'Flex, Grid, and more',
-                    color: Colors.purple.shade100,
-                    onTap: () {},
+                    subtitle: 'Container, Column, Row, Stack',
+                    color: Colors.teal.shade100,
+                    onTap: () => Get.to(() => const LayoutScreen(),
+                        transition: Transition.fadeIn),
                   ),
                 ),
               ],

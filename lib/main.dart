@@ -3,6 +3,11 @@ import 'package:get/get.dart';
 import 'package:widgets_in_flutter/favorites/favorites.screen.dart';
 import 'package:widgets_in_flutter/favorites/favorites.controller.dart';
 import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
+import 'package:widgets_in_flutter/widgets/inputs/inputs.screen.dart';
+import 'package:widgets_in_flutter/widgets/navigation/navigation.screen.dart';
+import 'package:widgets_in_flutter/widgets/text/text.screen.dart';
+import 'package:widgets_in_flutter/widgets/images/images.screen.dart';
+import 'package:widgets_in_flutter/widgets/layout/layout.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -39,6 +44,26 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_ACTIONS,
             page: () => const ActionsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_INPUTS,
+            page: () => const InputsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_NAVIGATION,
+            page: () => const NavigationScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_TEXT,
+            page: () => const TextScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_IMAGES,
+            page: () => const ImagesScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_LAYOUT,
+            page: () => const LayoutScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {

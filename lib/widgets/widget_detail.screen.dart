@@ -92,7 +92,7 @@ class WidgetDetailScreen extends StatelessWidget {
                   ),
                 ),
               );
-            }).toList(),
+            }),
           ],
         ],
       ),

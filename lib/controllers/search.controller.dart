@@ -15,6 +15,7 @@ class GetSearchController extends GetxController {
 
   void loadWidgets() {
     allWidgets.assignAll([
+      // Actions widgets
       {
         'name': 'FilledButton',
         'category': 'actions',
@@ -40,6 +41,27 @@ class GetSearchController extends GetxController {
         'category': 'actions',
         'route': '/components/actions'
       },
+      {
+        'name': 'FloatingActionButton',
+        'category': 'actions',
+        'route': '/components/actions'
+      },
+      {
+        'name': 'DropdownButton',
+        'category': 'actions',
+        'route': '/components/actions'
+      },
+      {
+        'name': 'PopupMenuButton',
+        'category': 'actions',
+        'route': '/components/actions'
+      },
+      {
+        'name': 'MenuAnchor',
+        'category': 'actions',
+        'route': '/components/actions'
+      },
+      // Selection widgets
       {
         'name': 'Checkbox',
         'category': 'selections',
@@ -70,6 +92,112 @@ class GetSearchController extends GetxController {
         'category': 'selections',
         'route': '/components/selections'
       },
+      {
+        'name': 'Dialog',
+        'category': 'selections',
+        'route': '/components/selections'
+      },
+      {
+        'name': 'DatePicker',
+        'category': 'selections',
+        'route': '/components/selections'
+      },
+      {
+        'name': 'TimePicker',
+        'category': 'selections',
+        'route': '/components/selections'
+      },
+      // Input widgets
+      {
+        'name': 'TextField',
+        'category': 'inputs',
+        'route': '/components/inputs'
+      },
+      {
+        'name': 'TextFormField',
+        'category': 'inputs',
+        'route': '/components/inputs'
+      },
+      {'name': 'Switch', 'category': 'inputs', 'route': '/components/inputs'},
+      {'name': 'Slider', 'category': 'inputs', 'route': '/components/inputs'},
+      {
+        'name': 'RangeSlider',
+        'category': 'inputs',
+        'route': '/components/inputs'
+      },
+      {'name': 'Stepper', 'category': 'inputs', 'route': '/components/inputs'},
+      // Navigation widgets
+      {
+        'name': 'AppBar',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'BottomNavigationBar',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'NavigationBar',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'TabBar',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'Drawer',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'PageView',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      {
+        'name': 'NavigationRail',
+        'category': 'navigation',
+        'route': '/components/navigation'
+      },
+      // Text widgets
+      {'name': 'Text', 'category': 'text', 'route': '/components/text'},
+      {'name': 'RichText', 'category': 'text', 'route': '/components/text'},
+      {
+        'name': 'SelectableText',
+        'category': 'text',
+        'route': '/components/text'
+      },
+      // Image widgets
+      {'name': 'Image', 'category': 'images', 'route': '/components/images'},
+      {'name': 'Icon', 'category': 'images', 'route': '/components/images'},
+      {
+        'name': 'CircleAvatar',
+        'category': 'images',
+        'route': '/components/images'
+      },
+      {
+        'name': 'NetworkImage',
+        'category': 'images',
+        'route': '/components/images'
+      },
+      // Layout widgets
+      {
+        'name': 'Container',
+        'category': 'layout',
+        'route': '/components/layout'
+      },
+      {'name': 'Column', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Row', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Stack', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Padding', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Center', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Wrap', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Expanded', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'Flexible', 'category': 'layout', 'route': '/components/layout'},
+      {'name': 'SizedBox', 'category': 'layout', 'route': '/components/layout'},
     ]);
   }
 
