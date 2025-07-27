@@ -123,6 +123,40 @@ class SearchScreen extends StatelessWidget {
         return Colors.cyan;
       case 'animations':
         return Colors.deepPurple;
+      case 'forms':
+        return Colors.amber;
+      case 'material':
+        return Colors.lightBlue;
+      case 'gestures':
+        return Colors.red;
+      case 'scrolling':
+        return Colors.lime;
+      case 'media':
+        return Colors.brown;
+      case 'platform':
+        return Colors.grey;
+      case 'sensors':
+        return Colors.deepOrange;
+      case 'accessibility':
+        return Colors.lightGreen;
+      case 'performance':
+        return Colors.yellow;
+      case 'advanced_animations':
+        return Colors.purple;
+      case 'paint':
+        return Colors.blueGrey;
+      case 'state':
+        return Colors.indigo;
+      case 'cupertino':
+        return Colors.grey;
+      case 'slivers':
+        return Colors.deepPurple;
+      case 'dialogs_overlays':
+        return Colors.cyan;
+      case 'effects_filters':
+        return Colors.pink;
+      case 'testing_debug':
+        return Colors.red;
       default:
         return Colors.grey;
     }

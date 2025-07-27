@@ -456,6 +456,171 @@ class GetSearchController extends GetxController {
       {'name': 'Obx', 'category': 'state', 'route': '/components/state'},
       {'name': 'GetBuilder', 'category': 'state', 'route': '/components/state'},
       {'name': 'Provider', 'category': 'state', 'route': '/components/state'},
+      // Cupertino widgets
+      {
+        'name': 'CupertinoButton',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoSwitch',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoSlider',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoTextField',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoDatePicker',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoActivityIndicator',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoAlertDialog',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      {
+        'name': 'CupertinoActionSheet',
+        'category': 'cupertino',
+        'route': '/components/cupertino'
+      },
+      // Slivers widgets
+      {
+        'name': 'SliverAppBar',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      {
+        'name': 'SliverList',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      {
+        'name': 'SliverGrid',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      {
+        'name': 'SliverToBoxAdapter',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      {
+        'name': 'SliverPersistentHeader',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      {
+        'name': 'CustomScrollView',
+        'category': 'slivers',
+        'route': '/components/slivers'
+      },
+      // Dialogs & Overlays widgets
+      {
+        'name': 'AlertDialog',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'SimpleDialog',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'BottomSheet',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'SnackBar',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'Tooltip',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'PopupMenuButton',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      {
+        'name': 'MaterialBanner',
+        'category': 'dialogs_overlays',
+        'route': '/components/dialogs_overlays'
+      },
+      // Effects & Filters widgets
+      {
+        'name': 'Opacity',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      {
+        'name': 'Transform',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      {
+        'name': 'BackdropFilter',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      {
+        'name': 'ShaderMask',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      {
+        'name': 'ClipPath',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      {
+        'name': 'ClipRRect',
+        'category': 'effects_filters',
+        'route': '/components/effects_filters'
+      },
+      // Testing & Debug widgets
+      {
+        'name': 'DebugPrint',
+        'category': 'testing_debug',
+        'route': '/components/testing_debug'
+      },
+      {
+        'name': 'Assert',
+        'category': 'testing_debug',
+        'route': '/components/testing_debug'
+      },
+      {
+        'name': 'Key',
+        'category': 'testing_debug',
+        'route': '/components/testing_debug'
+      },
+      {
+        'name': 'ValueKey',
+        'category': 'testing_debug',
+        'route': '/components/testing_debug'
+      },
+      {
+        'name': 'WidgetTester',
+        'category': 'testing_debug',
+        'route': '/components/testing_debug'
+      },
     ]);
   }
 

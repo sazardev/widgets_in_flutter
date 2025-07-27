@@ -23,6 +23,11 @@ import 'package:widgets_in_flutter/widgets/state/state.screen.dart'
     hide ThemeController;
 import 'package:widgets_in_flutter/widgets/advanced_animations/advanced_animations.screen.dart';
 import 'package:widgets_in_flutter/widgets/sensors/sensors.screen.dart';
+import 'package:widgets_in_flutter/widgets/cupertino/cupertino.screen.dart';
+import 'package:widgets_in_flutter/widgets/slivers/slivers.screen.dart';
+import 'package:widgets_in_flutter/widgets/dialogs_overlays/dialogs_overlays.screen.dart';
+import 'package:widgets_in_flutter/widgets/effects_filters/effects_filters.screen.dart';
+import 'package:widgets_in_flutter/widgets/testing_debug/testing_debug.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -135,6 +140,26 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_SENSORS,
             page: () => const SensorsScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_CUPERTINO,
+            page: () => const CupertinoScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_SLIVERS,
+            page: () => const SliversScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_DIALOGS_OVERLAYS,
+            page: () => const DialogsOverlaysScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_EFFECTS_FILTERS,
+            page: () => const EffectsFiltersScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_TESTING_DEBUG,
+            page: () => const TestingDebugScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {

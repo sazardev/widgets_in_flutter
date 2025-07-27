@@ -23,6 +23,11 @@ import 'package:widgets_in_flutter/widgets/performance/performance.screen.dart';
 import 'package:widgets_in_flutter/widgets/advanced_animations/advanced_animations.screen.dart';
 import 'package:widgets_in_flutter/widgets/paint/paint.screen.dart';
 import 'package:widgets_in_flutter/widgets/state/state.screen.dart';
+import 'package:widgets_in_flutter/widgets/cupertino/cupertino.screen.dart';
+import 'package:widgets_in_flutter/widgets/slivers/slivers.screen.dart';
+import 'package:widgets_in_flutter/widgets/dialogs_overlays/dialogs_overlays.screen.dart';
+import 'package:widgets_in_flutter/widgets/effects_filters/effects_filters.screen.dart';
+import 'package:widgets_in_flutter/widgets/testing_debug/testing_debug.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -294,6 +299,61 @@ class ComponentsScreen extends StatelessWidget {
                     subtitle: 'GetX, Provider, Bloc patterns',
                     color: Colors.indigo.shade200,
                     onTap: () => Get.to(() => const StateManagementScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2200),
+                  child: CategoryCard(
+                    icon: Icons.phone_iphone,
+                    title: 'Cupertino (iOS)',
+                    subtitle: 'iOS-style widgets, CupertinoButton',
+                    color: Colors.grey.shade200,
+                    onTap: () => Get.to(() => const CupertinoScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2300),
+                  child: CategoryCard(
+                    icon: Icons.layers,
+                    title: 'Slivers',
+                    subtitle: 'SliverAppBar, Advanced scrolling',
+                    color: Colors.deepPurple.shade100,
+                    onTap: () => Get.to(() => const SliversScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2400),
+                  child: CategoryCard(
+                    icon: Icons.layers_outlined,
+                    title: 'Dialogs & Overlays',
+                    subtitle: 'Dialogs, BottomSheets, Overlays',
+                    color: Colors.cyan.shade200,
+                    onTap: () => Get.to(() => const DialogsOverlaysScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2500),
+                  child: CategoryCard(
+                    icon: Icons.auto_fix_high,
+                    title: 'Effects & Filters',
+                    subtitle: 'Blur, Gradients, Transforms',
+                    color: Colors.pink.shade200,
+                    onTap: () => Get.to(() => const EffectsFiltersScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2600),
+                  child: CategoryCard(
+                    icon: Icons.bug_report,
+                    title: 'Testing & Debug',
+                    subtitle: 'Debug tools, Testing widgets',
+                    color: Colors.red.shade200,
+                    onTap: () => Get.to(() => const TestingDebugScreen(),
                         transition: Transition.fadeIn),
                   ),
                 ),

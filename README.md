@@ -46,7 +46,7 @@ Crear la **galería de widgets de Flutter más completa del mundo**, cubriendo t
 </div>
 
 ### 🚀 **Core Features**
-- 🧩 **Massive Widget Collection**: Currently 120+ widgets, targeting 200+ total (60% complete!)
+- 🧩 **Massive Widget Collection**: Currently 180+ widgets, targeting 200+ total (90% complete!)
 - 🔄 **Material 2 vs Material 3**: Toggle between design systems with one tap
 - 📋 **Copy-Paste Ready Code**: Grab code snippets for your own projects
 - 🔍 **Smart Search**: Find exactly what you need quickly by name or category
@@ -75,6 +75,11 @@ Crear la **galería de widgets de Flutter más completa del mundo**, cubriendo t
 - **Advanced Animations** (8/15): TweenAnimationBuilder, AnimationController, CustomTween, Physics ✅ NEW!
 - **Custom Paint** (6/8): CustomPaint, CustomPainter, Canvas, Paint ✅ NEW!
 - **State Management** (8/10): GetX, Obx, GetBuilder, Provider, Riverpod ✅ NEW!
+- **Cupertino (iOS)** (12/15): CupertinoButton, CupertinoSwitch, CupertinoDatePicker, iOS-style widgets ✅ NEW!
+- **Slivers** (10/12): SliverAppBar, SliverList, SliverGrid, Advanced scrolling ✅ NEW!
+- **Dialogs & Overlays** (12/15): AlertDialog, BottomSheet, SnackBar, Overlays, Tooltips ✅ NEW!
+- **Effects & Filters** (10/12): Opacity, Transform, Blur, Gradients, ShaderMask ✅ NEW!
+- **Testing & Debug** (8/10): Debug tools, Widget testing, Performance monitoring ✅ NEW!
 - **Core Features**: Navigation, Search, Themes, Code Display
 
 ### 🔥 **Coming Soon**

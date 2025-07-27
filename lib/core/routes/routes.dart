@@ -24,4 +24,9 @@ class Routes {
   static const COMPONENTS_ADVANCED_ANIMATIONS =
       '/components/advanced_animations/';
   static const COMPONENTS_SENSORS = '/components/sensors/';
+  static const COMPONENTS_CUPERTINO = '/components/cupertino/';
+  static const COMPONENTS_SLIVERS = '/components/slivers/';
+  static const COMPONENTS_DIALOGS_OVERLAYS = '/components/dialogs_overlays/';
+  static const COMPONENTS_EFFECTS_FILTERS = '/components/effects_filters/';
+  static const COMPONENTS_TESTING_DEBUG = '/components/testing_debug/';
 }
