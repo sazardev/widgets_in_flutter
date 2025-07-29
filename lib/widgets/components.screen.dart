@@ -28,6 +28,9 @@ import 'package:widgets_in_flutter/widgets/slivers/slivers.screen.dart';
 import 'package:widgets_in_flutter/widgets/dialogs_overlays/dialogs_overlays.screen.dart';
 import 'package:widgets_in_flutter/widgets/effects_filters/effects_filters.screen.dart';
 import 'package:widgets_in_flutter/widgets/testing_debug/testing_debug.screen.dart';
+import 'package:widgets_in_flutter/widgets/charts_data/charts_data.screen.dart';
+import 'package:widgets_in_flutter/widgets/internationalization/internationalization.screen.dart';
+import 'package:widgets_in_flutter/widgets/security_auth/security_auth.screen.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -354,6 +357,40 @@ class ComponentsScreen extends StatelessWidget {
                     subtitle: 'Debug tools, Testing widgets',
                     color: Colors.red.shade200,
                     onTap: () => Get.to(() => const TestingDebugScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2700),
+                  child: CategoryCard(
+                    icon: Icons.insert_chart,
+                    title: 'Charts & Data',
+                    subtitle: 'Charts, Graphs, Data visualization',
+                    color: Colors.lightBlue.shade200,
+                    onTap: () => Get.to(() => const ChartsDataScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2800),
+                  child: CategoryCard(
+                    icon: Icons.language,
+                    title: 'Internationalization',
+                    subtitle: 'i18n, RTL, Localization',
+                    color: Colors.lightGreen.shade200,
+                    onTap: () => Get.to(
+                        () => const InternationalizationScreen(),
+                        transition: Transition.fadeIn),
+                  ),
+                ),
+                FadeInUp(
+                  delay: const Duration(milliseconds: 2900),
+                  child: CategoryCard(
+                    icon: Icons.security,
+                    title: 'Security & Auth',
+                    subtitle: 'Authentication, Encryption',
+                    color: Colors.amber.shade200,
+                    onTap: () => Get.to(() => const SecurityAuthScreen(),
                         transition: Transition.fadeIn),
                   ),
                 ),

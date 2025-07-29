@@ -28,6 +28,9 @@ import 'package:widgets_in_flutter/widgets/slivers/slivers.screen.dart';
 import 'package:widgets_in_flutter/widgets/dialogs_overlays/dialogs_overlays.screen.dart';
 import 'package:widgets_in_flutter/widgets/effects_filters/effects_filters.screen.dart';
 import 'package:widgets_in_flutter/widgets/testing_debug/testing_debug.screen.dart';
+import 'package:widgets_in_flutter/widgets/charts_data/charts_data.screen.dart';
+import 'package:widgets_in_flutter/widgets/internationalization/internationalization.screen.dart';
+import 'package:widgets_in_flutter/widgets/security_auth/security_auth.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -160,6 +163,18 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_TESTING_DEBUG,
             page: () => const TestingDebugScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_CHARTS_DATA,
+            page: () => const ChartsDataScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_INTERNATIONALIZATION,
+            page: () => const InternationalizationScreen(),
+          ),
+          GetPage(
+            name: Routes.COMPONENTS_SECURITY_AUTH,
+            page: () => const SecurityAuthScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {

@@ -29,4 +29,8 @@ class Routes {
   static const COMPONENTS_DIALOGS_OVERLAYS = '/components/dialogs_overlays/';
   static const COMPONENTS_EFFECTS_FILTERS = '/components/effects_filters/';
   static const COMPONENTS_TESTING_DEBUG = '/components/testing_debug/';
+  static const COMPONENTS_CHARTS_DATA = '/components/charts_data/';
+  static const COMPONENTS_INTERNATIONALIZATION =
+      '/components/internationalization/';
+  static const COMPONENTS_SECURITY_AUTH = '/components/security_auth/';
 }

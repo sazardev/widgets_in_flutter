@@ -621,6 +621,112 @@ class GetSearchController extends GetxController {
         'category': 'testing_debug',
         'route': '/components/testing_debug'
       },
+
+      // Charts & Data Visualization
+      {
+        'name': 'LinearProgressIndicator',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'CircularProgressIndicator',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'DataTable',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'CustomPaint',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'BarChart',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'LineChart',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'PieChart',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+      {
+        'name': 'GaugeChart',
+        'category': 'charts_data',
+        'route': '/components/charts_data'
+      },
+
+      // Internationalization
+      {
+        'name': 'Directionality',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+      {
+        'name': 'Localizations',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+      {
+        'name': 'TextDirection',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+      {
+        'name': 'DatePicker',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+      {
+        'name': 'NumberFormat',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+      {
+        'name': 'InputMethod',
+        'category': 'internationalization',
+        'route': '/components/internationalization'
+      },
+
+      // Security & Authentication
+      {
+        'name': 'TextField',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
+      {
+        'name': 'BiometricAuth',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
+      {
+        'name': 'TwoFactorAuth',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
+      {
+        'name': 'PinInput',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
+      {
+        'name': 'Encryption',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
+      {
+        'name': 'SessionManager',
+        'category': 'security_auth',
+        'route': '/components/security_auth'
+      },
     ]);
   }
 
