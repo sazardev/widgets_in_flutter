@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:math' as math;
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
@@ -25,7 +24,6 @@ class _SecurityAuthScreenState extends State<SecurityAuthScreen>
   bool _isBiometricEnabled = false;
   bool _isTwoFactorEnabled = false;
   bool _isAuthenticated = false;
-  String _authMethod = 'password';
   String _securityLevel = 'medium';
   int _loginAttempts = 0;
   late AnimationController _shakeController;

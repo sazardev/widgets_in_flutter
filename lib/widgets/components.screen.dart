@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:widgets_in_flutter/shared/category_card.widget.dart';
+import 'package:widgets_in_flutter/shared/category_card_new.widget.dart';
 import 'package:widgets_in_flutter/widgets/actions/actions.screen.dart';
 import 'package:widgets_in_flutter/widgets/selections/selection.screen.dart';
 import 'package:widgets_in_flutter/widgets/inputs/inputs.screen.dart';

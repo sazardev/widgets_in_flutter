@@ -1,16 +1,33 @@
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class GetSearchController extends GetxController {
   final RxList<Map<String, dynamic>> allWidgets = <Map<String, dynamic>>[].obs;
   final RxList<Map<String, dynamic>> filteredWidgets =
       <Map<String, dynamic>>[].obs;
   final RxString searchQuery = ''.obs;
+  final RxString selectedCategory = 'all'.obs;
+  final RxList<String> searchHistory = <String>[].obs;
+  final RxList<String> popularSearches = <String>[].obs;
+  final RxBool isAdvancedSearch = false.obs;
+  final RxString sortBy = 'name'.obs; // name, category, popularity
+  final RxBool sortAscending = true.obs;
+  final RxList<String> availableCategories = <String>[].obs;
 
   @override
   void onInit() {
     super.onInit();
     loadWidgets();
+    loadSearchHistory();
+    loadPopularSearches();
     filteredWidgets.assignAll(allWidgets);
+    _updateAvailableCategories();
+
+    // Escuchar cambios para actualizar filtros
+    ever(searchQuery, (_) => _updateFilteredWidgets());
+    ever(selectedCategory, (_) => _updateFilteredWidgets());
+    ever(sortBy, (_) => _updateFilteredWidgets());
+    ever(sortAscending, (_) => _updateFilteredWidgets());
   }
 
   void loadWidgets() {
@@ -732,13 +749,170 @@ class GetSearchController extends GetxController {
 
   void search(String query) {
     searchQuery.value = query;
-    if (query.isEmpty) {
-      filteredWidgets.assignAll(allWidgets);
-    } else {
-      filteredWidgets.assignAll(allWidgets.where((widget) {
-        return widget['name'].toLowerCase().contains(query.toLowerCase()) ||
-            widget['category'].toLowerCase().contains(query.toLowerCase());
-      }).toList());
+    if (query.isNotEmpty) {
+      _addToSearchHistory(query);
+      _updatePopularSearches(query);
     }
+    _updateFilteredWidgets();
+  }
+
+  void filterByCategory(String category) {
+    selectedCategory.value = category;
+  }
+
+  void setSortBy(String sort) {
+    if (sortBy.value == sort) {
+      sortAscending.value = !sortAscending.value;
+    } else {
+      sortBy.value = sort;
+      sortAscending.value = true;
+    }
+  }
+
+  void toggleAdvancedSearch() {
+    isAdvancedSearch.value = !isAdvancedSearch.value;
+  }
+
+  void clearSearch() {
+    searchQuery.value = '';
+    selectedCategory.value = 'all';
+    sortBy.value = 'name';
+    sortAscending.value = true;
+  }
+
+  List<Map<String, dynamic>> getSearchSuggestions(String query) {
+    if (query.isEmpty) return [];
+
+    return allWidgets
+        .where((widget) =>
+            widget['name'].toLowerCase().startsWith(query.toLowerCase()))
+        .take(5)
+        .toList();
+  }
+
+  void _updateFilteredWidgets() {
+    var filtered = allWidgets.where((widget) {
+      final matchesSearch = searchQuery.value.isEmpty ||
+          widget['name']
+              .toLowerCase()
+              .contains(searchQuery.value.toLowerCase()) ||
+          widget['category']
+              .toLowerCase()
+              .contains(searchQuery.value.toLowerCase());
+
+      final matchesCategory = selectedCategory.value == 'all' ||
+          widget['category'] == selectedCategory.value;
+
+      return matchesSearch && matchesCategory;
+    }).toList();
+
+    // Aplicar ordenamiento
+    filtered.sort((a, b) {
+      int comparison = 0;
+
+      switch (sortBy.value) {
+        case 'category':
+          comparison = a['category'].compareTo(b['category']);
+          break;
+        case 'popularity':
+          // Simulamos popularidad basada en si está en búsquedas populares
+          final aPopular = popularSearches.contains(a['name']) ? 1 : 0;
+          final bPopular = popularSearches.contains(b['name']) ? 1 : 0;
+          comparison = aPopular.compareTo(bPopular);
+          break;
+        case 'name':
+        default:
+          comparison = a['name'].compareTo(b['name']);
+          break;
+      }
+
+      return sortAscending.value ? comparison : -comparison;
+    });
+
+    filteredWidgets.assignAll(filtered);
+  }
+
+  void _updateAvailableCategories() {
+    final categories = allWidgets
+        .map((widget) => widget['category'] as String)
+        .toSet()
+        .toList();
+    categories.sort();
+    availableCategories.assignAll(['all', ...categories]);
+  }
+
+  Future<void> loadSearchHistory() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final history = prefs.getStringList('search_history') ?? [];
+      searchHistory.assignAll(history);
+    } catch (e) {
+      print('Error loading search history: $e');
+    }
+  }
+
+  Future<void> _addToSearchHistory(String query) async {
+    if (query.trim().isEmpty) return;
+
+    // Remover si ya existe
+    searchHistory.remove(query);
+    // Agregar al inicio
+    searchHistory.insert(0, query);
+    // Mantener solo los últimos 10
+    if (searchHistory.length > 10) {
+      searchHistory.removeRange(10, searchHistory.length);
+    }
+
+    // Guardar en SharedPreferences
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setStringList('search_history', searchHistory.toList());
+    } catch (e) {
+      print('Error saving search history: $e');
+    }
+  }
+
+  Future<void> loadPopularSearches() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final popular = prefs.getStringList('popular_searches') ?? [];
+      popularSearches.assignAll(popular);
+    } catch (e) {
+      print('Error loading popular searches: $e');
+    }
+  }
+
+  Future<void> _updatePopularSearches(String query) async {
+    if (query.trim().isEmpty) return;
+
+    // Incrementar contador (simulado)
+    if (!popularSearches.contains(query)) {
+      popularSearches.add(query);
+      // Mantener solo los 5 más populares
+      if (popularSearches.length > 5) {
+        popularSearches.removeAt(0);
+      }
+
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setStringList('popular_searches', popularSearches.toList());
+      } catch (e) {
+        print('Error saving popular searches: $e');
+      }
+    }
+  }
+
+  void clearSearchHistory() async {
+    searchHistory.clear();
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.remove('search_history');
+    } catch (e) {
+      print('Error clearing search history: $e');
+    }
+  }
+
+  List<String> getAvailableCategories() {
+    return availableCategories.toList();
   }
 }

@@ -34,7 +34,7 @@ class FavoriteButton extends StatelessWidget {
         ),
         tooltip: isFavorite ? 'Remove from favorites' : 'Add to favorites',
         onPressed: () {
-          controller.toggleFavorite(widgetName);
+          controller.toggleFavorite(widgetName, 'unknown', '/components');
 
           final String message = isFavorite
               ? '$widgetName removed from favorites'

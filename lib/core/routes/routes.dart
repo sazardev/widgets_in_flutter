@@ -33,4 +33,5 @@ class Routes {
   static const COMPONENTS_INTERNATIONALIZATION =
       '/components/internationalization/';
   static const COMPONENTS_SECURITY_AUTH = '/components/security_auth/';
+  static const ADVANCED_SEARCH = '/advanced_search';
 }

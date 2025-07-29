@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-material.widget.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
+import 'package:widgets_in_flutter/code/code.screen.dart';
+import 'package:widgets_in_flutter/components/cupertino/constants/cupertino_codes.dart';
+import 'package:widgets_in_flutter/favorites/favorite_button_new.dart';
 
 class CupertinoScreen extends StatefulWidget {
   const CupertinoScreen({super.key});
@@ -26,6 +30,11 @@ class _CupertinoScreenState extends State<CupertinoScreen> {
       appBar: AppBar(
         title: const Text('Cupertino (iOS) Widgets'),
         actions: [
+          FavoriteIconButton(
+            widgetName: 'Cupertino',
+            category: 'cupertino',
+            route: '/components/cupertino/',
+          ),
           ThemeMaterial(isLandscape: false),
           ThemeBrightness(isLandscape: false),
           ThemeSelector(isLandscape: false),
@@ -69,6 +78,18 @@ class _CupertinoScreenState extends State<CupertinoScreen> {
                 ),
               ),
             ],
+          ),
+          // View Code button for Cupertino Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': cupertinoSourceCodes['CupertinoButton-Basic']!,
+                'title': 'CupertinoButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View CupertinoButton Codes'),
+            ),
           ),
           CardComponents(
             content: 'Cupertino Form Controls',

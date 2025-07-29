@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-material.widget.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
+import 'package:widgets_in_flutter/code/code.screen.dart';
+import 'package:widgets_in_flutter/components/dialogs_overlays/constants/dialogs_overlays_codes.dart';
+import 'package:widgets_in_flutter/favorites/favorite_button_new.dart';
 
 class DialogsOverlaysScreen extends StatefulWidget {
   const DialogsOverlaysScreen({super.key});
@@ -22,6 +26,11 @@ class _DialogsOverlaysScreenState extends State<DialogsOverlaysScreen> {
       appBar: AppBar(
         title: const Text('Dialogs & Overlays'),
         actions: [
+          FavoriteIconButton(
+            widgetName: 'Dialogs & Overlays',
+            category: 'dialogs_overlays',
+            route: '/components/dialogs_overlays/',
+          ),
           ThemeMaterial(isLandscape: false),
           ThemeBrightness(isLandscape: false),
           ThemeSelector(isLandscape: false),
@@ -59,6 +68,18 @@ class _DialogsOverlaysScreenState extends State<DialogsOverlaysScreen> {
                 child: const Text('About Dialog'),
               ),
             ],
+          ),
+          // View Code button for Dialogs
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': dialogsOverlaysSourceCodes['AlertDialog-Basic']!,
+                'title': 'Dialog Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View Dialog Codes'),
+            ),
           ),
           CardComponents(
             content: 'Bottom Sheets',

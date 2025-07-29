@@ -31,6 +31,7 @@ import 'package:widgets_in_flutter/widgets/testing_debug/testing_debug.screen.da
 import 'package:widgets_in_flutter/widgets/charts_data/charts_data.screen.dart';
 import 'package:widgets_in_flutter/widgets/internationalization/internationalization.screen.dart';
 import 'package:widgets_in_flutter/widgets/security_auth/security_auth.screen.dart';
+import 'package:widgets_in_flutter/widgets/advanced_search.screen.dart';
 import 'package:widgets_in_flutter/code/code.controller.dart';
 import 'package:widgets_in_flutter/widgets/components.screen.dart';
 import 'package:widgets_in_flutter/core/routes/routes.controller.dart';
@@ -175,6 +176,10 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: Routes.COMPONENTS_SECURITY_AUTH,
             page: () => const SecurityAuthScreen(),
+          ),
+          GetPage(
+            name: Routes.ADVANCED_SEARCH,
+            page: () => const AdvancedSearchScreen(),
           ),
         ],
         initialBinding: BindingsBuilder(() {

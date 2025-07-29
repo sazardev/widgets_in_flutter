@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:widgets_in_flutter/code/code.screen.dart';
 import 'package:widgets_in_flutter/components/actions/constant/filled-button.contants.dart';
+import 'package:widgets_in_flutter/components/actions/constants/button_codes.dart';
 import 'package:widgets_in_flutter/shared/cardcomponents.widget.dart';
 import 'package:widgets_in_flutter/shared/navigationbar.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-brightness.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-color.widget.dart';
 import 'package:widgets_in_flutter/core/theme/theme-material.widget.dart';
+import 'package:widgets_in_flutter/favorites/favorite_button_new.dart';
 
 class ActionsScreen extends StatelessWidget {
   const ActionsScreen({super.key});
@@ -17,6 +19,11 @@ class ActionsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Actions'),
         actions: [
+          FavoriteIconButton(
+            widgetName: 'Actions',
+            category: 'actions',
+            route: '/components/actions/',
+          ),
           ThemeMaterial(isLandscape: false),
           ThemeBrightness(isLandscape: false),
           ThemeSelector(isLandscape: false),
@@ -60,6 +67,18 @@ class ActionsScreen extends StatelessWidget {
               ),
             ],
           ),
+          // View Code button for Filled Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['FilledButton-Filled']!,
+                'title': 'FilledButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View All FilledButton Codes'),
+            ),
+          ),
           CardComponents(
             content: 'Outlined buttons',
             components: [
@@ -81,6 +100,18 @@ class ActionsScreen extends StatelessWidget {
                 label: const Text('Icon'),
               ),
             ],
+          ),
+          // View Code button for Outlined Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['OutlinedButton-Basic']!,
+                'title': 'OutlinedButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View OutlinedButton Codes'),
+            ),
           ),
           CardComponents(
             content: 'Elevated buttons',
@@ -104,6 +135,18 @@ class ActionsScreen extends StatelessWidget {
               ),
             ],
           ),
+          // View Code button for Elevated Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['ElevatedButton-Basic']!,
+                'title': 'ElevatedButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View ElevatedButton Codes'),
+            ),
+          ),
           CardComponents(
             content: 'Text buttons',
             components: [
@@ -125,6 +168,18 @@ class ActionsScreen extends StatelessWidget {
                 label: const Text('Icon'),
               ),
             ],
+          ),
+          // View Code button for Text Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['TextButton-Basic']!,
+                'title': 'TextButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View TextButton Codes'),
+            ),
           ),
           CardComponents(
             content: 'Icon buttons',
@@ -151,6 +206,18 @@ class ActionsScreen extends StatelessWidget {
               ),
             ],
           ),
+          // View Code button for Icon Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['IconButton-Basic']!,
+                'title': 'IconButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View IconButton Codes'),
+            ),
+          ),
           CardComponents(
             content: 'Floating Action Buttons',
             components: [
@@ -172,6 +239,18 @@ class ActionsScreen extends StatelessWidget {
                 icon: const Icon(Icons.add),
               ),
             ],
+          ),
+          // View Code button for Floating Action Buttons
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ElevatedButton.icon(
+              onPressed: () => Get.to(() => const CodeScreen(), arguments: {
+                'code': buttonSourceCodes['FloatingActionButton-Basic']!,
+                'title': 'FloatingActionButton Code Examples'
+              }),
+              icon: const Icon(Icons.code),
+              label: const Text('View FAB Codes'),
+            ),
           ),
           CardComponents(
             content: 'Dropdown Buttons',
